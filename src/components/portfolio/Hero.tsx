@@ -41,7 +41,7 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className="order-first lg:order-none">
+        <div>
           <div className="relative mx-auto flex max-w-md flex-col items-center lg:max-w-none">
             <div
               className="absolute left-1/2 top-1/2 -z-10 aspect-square w-[85%] -translate-x-1/2 -translate-y-[52%] rounded-full bg-surface"
