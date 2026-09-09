@@ -224,3 +224,8 @@
     display: none;
   }
 }
+
+/* Colorize a black icon to the portfolio lime green */
+@utility icon-lime {
+  filter: invert(52%) sepia(95%) saturate(1200%) hue-rotate(70deg) brightness(90%) contrast(105%);
+}

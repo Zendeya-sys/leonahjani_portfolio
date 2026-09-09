@@ -27,9 +27,9 @@ export function SocialRow({ size = 18 }: { size?: number }) {
                 : null;
         return (
           <li key={label}>
-            <a href="#contact" aria-label={label} className="social-dot">
+            <a href="#contact" aria-label={label} className="social-dot group">
               {imageSrc ? (
-                <img src={imageSrc} alt={label} className="h-[17px] w-[17px] invert" />
+                <img src={imageSrc} alt={label} className="h-[17px] w-[17px] icon-lime group-hover:invert" />
               ) : (
                 <Icon size={size} strokeWidth={2} />
               )}
