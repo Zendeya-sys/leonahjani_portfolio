@@ -31,7 +31,7 @@ export function About() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <p className="eyebrow">About</p>
         <h2 className="mt-3 max-w-2xl text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-          Know About Me In Details
+          <span className="text-charcoal">Know About</span> Me In Details
         </h2>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">

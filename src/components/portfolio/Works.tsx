@@ -9,7 +9,7 @@ export function Works() {
           <div className="min-w-0">
             <p className="eyebrow">Selected work</p>
             <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-              Some Of My Works
+              <span className="text-charcoal">Some Of</span> My Works
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
