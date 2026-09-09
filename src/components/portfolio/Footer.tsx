@@ -39,17 +39,24 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Follow</h3>
             <ul className="mt-4 flex flex-wrap gap-2">
-              {socials.map(({ label, Icon }) => (
-                <li key={label}>
-                  <a
-                    href="#contact"
-                    aria-label={label}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-charcoal-foreground/15 text-charcoal-foreground/75 transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <Icon size={17} />
-                  </a>
-                </li>
-              ))}
+              {socials.map(({ label, Icon }) => {
+                const imageSrc = label === "X" ? twitterAsset.url : label === "WhatsApp" ? whatsappAsset.url : null;
+                return (
+                  <li key={label}>
+                    <a
+                      href="#contact"
+                      aria-label={label}
+                      className="grid h-10 w-10 place-items-center rounded-full border border-charcoal-foreground/15 text-charcoal-foreground/75 transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {imageSrc ? (
+                        <img src={imageSrc} alt={label} className="h-[17px] w-[17px] invert" />
+                      ) : (
+                        <Icon size={17} />
+                      )}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
