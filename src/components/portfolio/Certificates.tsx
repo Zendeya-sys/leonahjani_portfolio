@@ -9,7 +9,7 @@ export function Certificates() {
           <div className="min-w-0">
             <p className="eyebrow">Qualifications</p>
             <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-              View My Certificates
+              <span className="text-charcoal">View My</span> Certificates
             </h2>
           </div>
           <a href="#contact" className="btn-base btn-outline shrink-0">

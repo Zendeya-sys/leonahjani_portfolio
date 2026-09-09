@@ -18,15 +18,15 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <p className="eyebrow">Get in touch</p>
         <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-          Let&apos;s Build Something Together
+          <span className="text-charcoal">Let&apos;s Build</span> Something Together
         </h2>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-12">
           <div className="rounded-xl bg-primary p-7 shadow-[var(--shadow-lime)] sm:p-10 lg:col-span-7">
-            <h3 className="text-2xl font-extrabold uppercase tracking-tight text-charcoal sm:text-4xl">
+            <h3 className="text-2xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
               Contact Info
             </h3>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-charcoal/80 sm:text-base">
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
               Interested in working together or just want to say hi? Feel free to reach out for
               collaborations, projects, or even just a friendly hello!
             </p>

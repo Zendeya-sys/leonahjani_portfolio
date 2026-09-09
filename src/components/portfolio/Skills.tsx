@@ -37,7 +37,7 @@ export function Skills() {
           <div className="min-w-0">
             <p className="eyebrow">Capabilities</p>
             <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-              My Skills &amp; Tools
+              <span className="text-charcoal">My Skills</span> &amp; Tools
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
