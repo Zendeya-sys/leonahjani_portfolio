@@ -1,5 +1,7 @@
 import { navLinks } from "./data";
 import { socials } from "./Socials";
+import twitterAsset from "@/assets/twitter.png.asset.json";
+import whatsappAsset from "@/assets/whatsapp.png.asset.json";
 
 export function Footer() {
   return (
