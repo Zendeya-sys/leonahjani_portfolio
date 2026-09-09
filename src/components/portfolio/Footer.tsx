@@ -2,6 +2,7 @@ import { navLinks } from "./data";
 import { socials } from "./Socials";
 import twitterAsset from "@/assets/twitter.png.asset.json";
 import whatsappAsset from "@/assets/whatsapp.png.asset.json";
+import tiktokAsset from "@/assets/tik-tok.png.asset.json";
 
 export function Footer() {
   return (
@@ -40,7 +41,8 @@ export function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Follow</h3>
             <ul className="mt-4 flex flex-wrap gap-2">
               {socials.map(({ label, Icon }) => {
-                const imageSrc = label === "X" ? twitterAsset.url : label === "WhatsApp" ? whatsappAsset.url : null;
+                const imageSrc =
+                  label === "X" ? twitterAsset.url : label === "WhatsApp" ? whatsappAsset.url : label === "TikTok" ? tiktokAsset.url : null;
                 return (
                   <li key={label}>
                     <a
