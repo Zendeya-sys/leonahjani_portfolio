@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import heroAvatar from "@/assets/hero-avatar.png.asset.json";
+import heroAvatar from "@/assets/hero-avatar.png";
 import { SocialRow } from "./Socials";
 
 export function Hero() {
@@ -48,7 +48,7 @@ export function Hero() {
               aria-hidden
             />
             <img
-              src={heroAvatar.url}
+              src={heroAvatar}
               alt="3D illustration of Leonah Jani in a cream suit holding an open laptop"
               width={512}
               height={512}
