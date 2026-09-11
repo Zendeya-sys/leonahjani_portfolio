@@ -122,18 +122,6 @@ export function Contact() {
                 className="relative mx-auto w-full max-w-xs object-contain"
               />
             </div>
-            <div className="card-surface p-6">
-              <h4 className="text-sm font-bold uppercase tracking-[0.14em]">Social Links</h4>
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {socials.map(({ label, Icon }) => (
-                  <li key={label}>
-                    <a href="#contact" aria-label={label} className="social-dot">
-                      <Icon size={18} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
