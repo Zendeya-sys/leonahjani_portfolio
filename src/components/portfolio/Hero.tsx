@@ -48,10 +48,10 @@ export function Hero() {
               aria-hidden
             />
             <img
-              src={heroAvatar}
-              alt="3D illustration of Leonah Jani in a lime green suit holding an open laptop"
-              width={1024}
-              height={1280}
+              src={heroAvatar.url}
+              alt="3D illustration of Leonah Jani in a cream suit holding an open laptop"
+              width={512}
+              height={512}
               className="relative w-full max-w-sm object-contain lg:max-w-md"
             />
             <div className="mt-2 w-full rounded-xl border border-border bg-card/80 px-4 py-3 backdrop-blur-sm">
