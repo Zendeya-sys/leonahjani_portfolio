@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import heroAvatar from "@/assets/hero-avatar.png";
+import heroAvatar from "@/assets/hero-avatar.png.asset.json";
 import { SocialRow } from "./Socials";
 
 export function Hero() {
