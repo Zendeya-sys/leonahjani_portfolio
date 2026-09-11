@@ -2,7 +2,6 @@ import { useState } from "react";
 import { MapPin, Mail, ArrowRight, Send } from "lucide-react";
 import { toast } from "sonner";
 import contactAvatar from "@/assets/contact-avatar.png";
-import { socials } from "./Socials";
 
 const fields = [
   { id: "name", label: "Full Name", type: "text", placeholder: "Your full name" },
@@ -122,18 +121,6 @@ export function Contact() {
                 loading="lazy"
                 className="relative mx-auto w-full max-w-xs object-contain"
               />
-            </div>
-            <div className="card-surface p-6">
-              <h4 className="text-sm font-bold uppercase tracking-[0.14em]">Social Links</h4>
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {socials.map(({ label, Icon }) => (
-                  <li key={label}>
-                    <a href="#contact" aria-label={label} className="social-dot">
-                      <Icon size={18} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
