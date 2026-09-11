@@ -2,7 +2,6 @@ import { useState } from "react";
 import { MapPin, Mail, ArrowRight, Send } from "lucide-react";
 import { toast } from "sonner";
 import contactAvatar from "@/assets/contact-avatar.png";
-import { socials } from "./Socials";
 
 const fields = [
   { id: "name", label: "Full Name", type: "text", placeholder: "Your full name" },
