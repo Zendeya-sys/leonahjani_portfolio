@@ -84,7 +84,12 @@ export function About() {
               <a href="#works" className="btn-base btn-lime">
                 More About Me <ArrowUpRight size={16} />
               </a>
-              <a href="#contact" className="btn-base btn-outline">
+              <a
+                href={CV_URL}
+                download={CV_FILENAME}
+                className="btn-base btn-outline"
+                aria-label={`Download Leonah Jani's CV as a PDF (${CV_FILENAME})`}
+              >
                 <Download size={16} /> Download CV
               </a>
             </div>
