@@ -1,5 +1,6 @@
 import { Download, ArrowUpRight, Check } from "lucide-react";
 import aboutAvatar from "@/assets/about-avatar.png";
+import { CV_URL, CV_FILENAME } from "./data";
 
 const roles = [
   {

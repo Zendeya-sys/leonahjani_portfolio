@@ -4,6 +4,9 @@ import workBrand from "@/assets/work-brand.jpg";
 import workLanding from "@/assets/work-landing.jpg";
 import workUiux from "@/assets/work-uiux.jpg";
 
+export const CV_URL = "/Leonah-M-Jani-CV.pdf";
+export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
+
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
