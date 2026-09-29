@@ -1,13 +1,10 @@
-import { Linkedin, Facebook, Instagram, AtSign } from "lucide-react";
-import { XIcon, WhatsAppIcon, TikTokIcon } from "./BrandIcons";
+import { Linkedin, Facebook, Instagram } from "lucide-react";
+import { TikTokIcon } from "./BrandIcons";
 
 export const socials = [
   { label: "LinkedIn", Icon: Linkedin },
   { label: "Facebook", Icon: Facebook },
   { label: "Instagram", Icon: Instagram },
-  { label: "Threads", Icon: AtSign },
-  { label: "X", Icon: XIcon },
-  { label: "WhatsApp", Icon: WhatsAppIcon },
   { label: "TikTok", Icon: TikTokIcon },
 ];
 
