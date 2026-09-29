@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import heroAvatar from "@/assets/hero-avatar.png.asset.json";
+import heroMarketing from "@/assets/hero-marketing-transparent.webp";
 import { SocialRow } from "./Socials";
 
 export function Hero() {
@@ -48,11 +48,13 @@ export function Hero() {
               aria-hidden
             />
             <img
-              src={heroAvatar.url}
-              alt="3D illustration of Leonah Jani in a lime blazer holding an open laptop"
-              width={512}
-              height={512}
-              className="relative w-full max-w-sm object-contain lg:max-w-md"
+              src={heroMarketing}
+              alt="Illustration of two marketing professionals connecting across a global network"
+              width={1000}
+              height={848}
+              fetchPriority="high"
+              decoding="async"
+              className="relative w-full max-w-md object-contain drop-shadow-sm lg:max-w-lg"
             />
             <div className="mt-2 w-full rounded-xl border border-border bg-card/80 px-4 py-3 backdrop-blur-sm">
               <SocialRow />
