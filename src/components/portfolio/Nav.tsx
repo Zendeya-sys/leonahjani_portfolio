@@ -8,10 +8,7 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3.5 lg:px-8">
-        <a href="#home" className="flex min-w-0 items-center gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary text-sm font-extrabold tracking-tight text-primary-foreground">
-            LJ
-          </span>
+        <a href="#home" className="min-w-0">
           <span className="min-w-0">
             <span className="block truncate text-sm font-bold tracking-tight">Leonah Jani</span>
             <span className="block truncate text-[11px] text-muted-foreground">
