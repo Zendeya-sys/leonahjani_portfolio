@@ -133,7 +133,11 @@ export function Contact() {
                 />
               </div>
             </div>
-            <button type="submit" disabled={sending} className="btn-base btn-lime mt-6 w-full">
+            <button
+              type="submit"
+              disabled={sending}
+              className="btn-base btn-lime mt-auto w-full pt-4 sm:mt-auto"
+            >
               {sending ? "Sending…" : "Send Message"} <Send size={16} />
             </button>
           </form>
