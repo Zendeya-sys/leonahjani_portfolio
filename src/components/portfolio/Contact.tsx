@@ -126,7 +126,7 @@ export function Contact() {
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
+                  rows={12}
                   required
                   placeholder="Tell me about your project…"
                   className="mt-2 w-full resize-none rounded-lg border border-primary/25 bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-primary focus:ring-2 focus:ring-primary/20"
