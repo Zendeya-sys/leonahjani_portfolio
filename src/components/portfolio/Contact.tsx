@@ -1,12 +1,38 @@
 import { useState } from "react";
-import { MapPin, Mail, ArrowRight, Send } from "lucide-react";
+import { MapPin, Mail, ArrowRight, Send, Phone } from "lucide-react";
 import { toast } from "sonner";
-import contactAvatar from "@/assets/contact-avatar.png";
 
 const fields = [
   { id: "name", label: "Full Name", type: "text", placeholder: "Your full name" },
   { id: "email", label: "Email Address", type: "email", placeholder: "you@email.com" },
   { id: "subject", label: "Subject", type: "text", placeholder: "What is this about?" },
+];
+
+const details = [
+  {
+    id: "phone",
+    icon: Phone,
+    label: "Phone",
+    text: "+263 78 499 9655",
+    href: "tel:+263784999655",
+    alt: "Call Leonah on +263 78 499 9655",
+  },
+  {
+    id: "email",
+    icon: Mail,
+    label: "Email",
+    text: "leonahjani@gmail.com",
+    href: "mailto:leonahjani@gmail.com",
+    alt: "Email Leonah at leonahjani@gmail.com",
+  },
+  {
+    id: "address",
+    icon: MapPin,
+    label: "Address",
+    text: "Harare, Zimbabwe",
+    href: undefined,
+    alt: "Based in Harare, Zimbabwe",
+  },
 ];
 
 export function Contact() {
@@ -17,40 +43,45 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <p className="eyebrow">Get in touch</p>
         <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-          <span className="text-charcoal">Let&apos;s Build</span> Something Together
+          <span className="text-charcoal">Let's Build</span> Something Together
         </h2>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-12">
-          <div className="rounded-xl bg-primary p-7 shadow-[var(--shadow-lime)] sm:p-10 lg:col-span-7">
-            <h3 className="text-2xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
-              Contact Info
-            </h3>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
-              Interested in working together or just want to say hi? Feel free to reach out for
-              collaborations, projects, or even just a friendly hello!
-            </p>
-            <a href="#contact-form" className="btn-base btn-dark mt-7">
-              Let&apos;s Work Together <ArrowRight size={16} />
-            </a>
-          </div>
-
-          <div className="grid gap-6 lg:col-span-5">
-            <div className="card-surface p-6">
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary-dark">
-                <MapPin size={19} />
-              </span>
-              <h4 className="mt-4 text-sm font-bold uppercase tracking-[0.14em]">Address</h4>
-              <p className="mt-1.5 text-sm text-muted-foreground">
-                Johannesburg, South Africa — available for remote work worldwide.
+          <div className="flex flex-col gap-6 lg:col-span-5">
+            <div className="rounded-xl bg-primary p-7 shadow-[var(--shadow-lime)] sm:p-10">
+              <h3 className="text-2xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
+                Contact Info
+              </h3>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
+                Interested in working together or just want to say hi? Feel free to reach out for
+                collaborations, projects, or even just a friendly hello!
               </p>
+              <a href="#contact-form" className="btn-base btn-dark mt-7">
+                Let's Work Together <ArrowRight size={16} />
+              </a>
             </div>
-            <div className="card-surface p-6">
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary-dark">
-                <Mail size={19} />
-              </span>
-              <h4 className="mt-4 text-sm font-bold uppercase tracking-[0.14em]">Email</h4>
-              <p className="mt-1.5 text-sm text-muted-foreground">hello@leonahjani.com</p>
-            </div>
+
+            {details.map((d) => {
+              const Icon = d.icon;
+              const body = (
+                <>
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary-dark">
+                    <Icon size={19} />
+                  </span>
+                  <h4 className="mt-4 text-sm font-bold uppercase tracking-[0.14em]">{d.label}</h4>
+                  <p className="mt-1.5 text-sm text-muted-foreground">{d.text}</p>
+                </>
+              );
+              return d.href ? (
+                <a key={d.id} href={d.href} aria-label={d.alt} className="card-surface block p-6">
+                  {body}
+                </a>
+              ) : (
+                <div key={d.id} className="card-surface p-6">
+                  {body}
+                </div>
+              );
+            })}
           </div>
 
           <form
@@ -106,23 +137,6 @@ export function Contact() {
               {sending ? "Sending…" : "Send Message"} <Send size={16} />
             </button>
           </form>
-
-          <div className="grid gap-6 lg:col-span-5">
-            <div className="relative overflow-hidden rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
-              <div
-                className="absolute left-1/2 top-1/2 aspect-square w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface"
-                aria-hidden
-              />
-              <img
-                src={contactAvatar}
-                alt="3D illustration of Leonah Jani beside a modern workstation with floating design tool icons"
-                width={1024}
-                height={1024}
-                loading="lazy"
-                className="relative mx-auto w-full max-w-xs object-contain"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>
