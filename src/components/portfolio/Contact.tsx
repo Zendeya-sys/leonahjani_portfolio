@@ -97,7 +97,7 @@ export function Contact() {
             }}
             className="flex flex-col rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-card)] sm:p-8 lg:col-span-7"
           >
-            <div className="grid flex-1 gap-5 sm:grid-cols-2">
+            <div className="grid content-start gap-5 sm:grid-cols-2">
               {fields.map((f, i) => (
                 <div key={f.id} className={i === 2 ? "sm:col-span-2" : ""}>
                   <label
