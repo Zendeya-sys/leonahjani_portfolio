@@ -22,14 +22,14 @@ export function Works() {
           {works.map((w) => (
             <li
               key={w.title}
-              className="card-surface group w-[300px] shrink-0 snap-start overflow-hidden sm:w-[380px]"
+              className="card-surface group w-full shrink-0 snap-start overflow-hidden sm:w-[440px]"
             >
-              <div className="aspect-[4/3] overflow-hidden border-b border-border bg-surface">
+              <div className="aspect-video overflow-hidden border-b border-border bg-surface">
                 <img
                   src={w.image}
                   alt={`${w.title} project preview`}
-                  width={1024}
-                  height={768}
+                  width={1280}
+                  height={720}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
@@ -43,10 +43,12 @@ export function Works() {
                   {w.description}
                 </p>
                 <a
-                  href="#contact"
+                  href={w.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-dark transition-colors hover:text-primary"
                 >
-                  View Case Study <ArrowUpRight size={16} />
+                  View Project <ArrowUpRight size={16} />
                 </a>
               </div>
             </li>
