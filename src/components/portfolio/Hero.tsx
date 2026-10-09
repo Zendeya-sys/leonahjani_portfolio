@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import heroMarketing from "@/assets/hero-marketing-transparent.webp";
+import { works, tools } from "./data";
 import { SocialRow } from "./Socials";
+
+const YEARS_EXPERIENCE = "1";
 
 export function Hero() {
   return (
