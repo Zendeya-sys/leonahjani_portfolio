@@ -1,4 +1,5 @@
 import workEmail from "@/assets/work-email-marketing.webp";
+import workBrandBook from "@/assets/work-brand-book.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
 export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
@@ -68,5 +69,13 @@ export const works = [
     description:
       "Campaign goals, strategy and expected results for a 50% off email promotion, presented in Canva.",
     url: "https://canva.link/fss2txtzhpgk6v4",
+  },
+  {
+    image: workBrandBook,
+    title: "WalkTall — Red Heels for Her",
+    category: "Brand Book · Fashion & Lifestyle",
+    description:
+      "An editorial brand book for WalkTall — modern fashion lookbook, trend forecast and lifestyle identity, presented in Canva.",
+    url: "https://canva.link/3brsmg04nr7nwd0",
   },
 ];
