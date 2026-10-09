@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import heroMarketing from "@/assets/hero-marketing-transparent.webp";
+import { works, tools } from "./data";
 import { SocialRow } from "./Socials";
+
+const YEARS_EXPERIENCE = "1";
 
 export function Hero() {
   return (
@@ -29,9 +32,9 @@ export function Hero() {
 
           <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
             {[
-              ["5+", "Years creating"],
-              ["40+", "Projects delivered"],
-              ["12", "Tools mastered"],
+              [YEARS_EXPERIENCE, "Year creating"],
+              [String(works.length), "Projects delivered"],
+              [String(tools.length), "Tools mastered"],
             ].map(([value, label]) => (
               <div key={label} className="min-w-0">
                 <dt className="text-2xl font-extrabold tracking-tight sm:text-3xl">{value}</dt>
