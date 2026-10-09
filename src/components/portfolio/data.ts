@@ -1,8 +1,4 @@
-import workDashboard from "@/assets/work-dashboard.jpg";
-import workSocial from "@/assets/work-social.jpg";
-import workBrand from "@/assets/work-brand.jpg";
-import workLanding from "@/assets/work-landing.jpg";
-import workUiux from "@/assets/work-uiux.jpg";
+import workEmail from "@/assets/work-email-marketing.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
 export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
@@ -66,38 +62,11 @@ export const certificates = [
 
 export const works = [
   {
-    image: workDashboard,
-    title: "Growth Analytics Dashboard",
-    category: "Marketing · Data Design",
+    image: workEmail,
+    title: "Email Marketing Campaign",
+    category: "Email Marketing · Strategy",
     description:
-      "A reporting surface that turns paid and organic channel data into one weekly decision view.",
-  },
-  {
-    image: workSocial,
-    title: "Social Campaign System",
-    category: "Social Media · Art Direction",
-    description:
-      "A modular grid system of templates that keeps a month of content on-brand in minutes.",
-  },
-  {
-    image: workBrand,
-    title: "Brand Identity Suite",
-    category: "Branding · Graphic Design",
-    description:
-      "Logo mark, stationery and usage rules built for a young consultancy entering a new market.",
-  },
-  {
-    image: workLanding,
-    title: "Conversion Landing Page",
-    category: "Web · Copy & Design",
-    description:
-      "A single-scroll launch page with clear hierarchy, strong CTA rhythm and fast load targets.",
-  },
-  {
-    image: workUiux,
-    title: "Mobile Product Interface",
-    category: "Product · UI/UX",
-    description:
-      "End-to-end flows, component library and prototype for a mobile-first service product.",
+      "Campaign goals, strategy and expected results for a 50% off email promotion, presented in Canva.",
+    url: "https://canva.link/fss2txtzhpgk6v4",
   },
 ];
