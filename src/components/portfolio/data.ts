@@ -1,5 +1,6 @@
 import workEmail from "@/assets/work-email-marketing.webp";
 import workBrandBook from "@/assets/work-brand-book.webp";
+import courseraCover from "@/assets/coursera-cover.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
 export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
@@ -30,34 +31,18 @@ export const tools = [
 
 export const certificates = [
   {
-    platform: "HubSpot Academy",
-    title: "Digital Marketing Certification",
-    meta: "Certification · Completed",
-    tint: "from-primary/15 to-primary/5",
+    platform: "Coursera · EDUCBA",
+    title: "Copywriting for Digital Marketing & SEO",
+    meta: "Completed · 3 July 2026",
+    image: courseraCover,
+    url: "/certificates/copywriting-digital-marketing-seo.pdf",
   },
   {
-    platform: "HubSpot Academy",
-    title: "Social Media Marketing",
-    meta: "Certification · Completed",
-    tint: "from-charcoal/10 to-charcoal/5",
-  },
-  {
-    platform: "Coursera",
-    title: "Graphic Design Fundamentals",
-    meta: "Course · Completed",
-    tint: "from-primary/20 to-primary/5",
-  },
-  {
-    platform: "Coursera",
-    title: "UI / UX Design Foundations",
-    meta: "Course · Completed",
-    tint: "from-charcoal/10 to-primary/10",
-  },
-  {
-    platform: "HubSpot Academy",
-    title: "Email Marketing",
-    meta: "Certification · Completed",
-    tint: "from-primary/15 to-charcoal/5",
+    platform: "Coursera · EDUCBA",
+    title: "Digital Branding and Brand Strategy",
+    meta: "Completed · 30 June 2026",
+    image: courseraCover,
+    url: "/certificates/digital-branding-brand-strategy.pdf",
   },
 ];
 
