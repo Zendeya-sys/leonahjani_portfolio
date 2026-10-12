@@ -7,10 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div className="min-w-0">
-            <div className="flex min-w-0 items-center gap-3">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary text-sm font-extrabold text-primary-foreground">
-                LJ
-              </span>
+            <div className="flex min-w-0 items-center">
               <span className="truncate text-lg font-bold tracking-tight">Leonah Jani</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-charcoal-foreground/65">
