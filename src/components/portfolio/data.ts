@@ -1,5 +1,6 @@
 import workEmail from "@/assets/work-email-marketing.webp";
 import workBrandBook from "@/assets/work-brand-book.webp";
+import workInfluencerBrief from "@/assets/work-influencer-brief.webp";
 import courseraCover from "@/assets/coursera-cover.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
@@ -62,5 +63,13 @@ export const works = [
     description:
       "An editorial brand book for WalkTall — modern fashion lookbook, trend forecast and lifestyle identity, presented in Canva.",
     url: "https://canva.link/3brsmg04nr7nwd0",
+  },
+  {
+    image: workInfluencerBrief,
+    title: "Influencer Marketing Campaign Brief",
+    category: "Influencer Marketing · Campaign Brief",
+    description:
+      "An influencer campaign brief with a two-week content calendar for a creator-led promotion, presented in Canva.",
+    url: "https://canva.link/osdjj2wwx5au52m",
   },
 ];
