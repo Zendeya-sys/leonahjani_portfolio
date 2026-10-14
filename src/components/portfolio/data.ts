@@ -3,6 +3,9 @@ import workBrandBook from "@/assets/work-brand-book.webp";
 import workInfluencerBrief from "@/assets/work-influencer-brief.webp";
 import workSocialStrategy from "@/assets/work-social-media-strategy.webp";
 import courseraCover from "@/assets/coursera-cover.webp";
+import flyer01 from "@/assets/flyer-01.webp";
+import flyer02 from "@/assets/flyer-02.webp";
+import flyer03 from "@/assets/flyer-03.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
 export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
@@ -13,6 +16,7 @@ export const navLinks = [
   { label: "Skills & Tools", href: "#skills" },
   { label: "Certificates", href: "#certificates" },
   { label: "Works", href: "#works" },
+  { label: "Flyers", href: "#flyers" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -80,5 +84,26 @@ export const works = [
     description:
       "A social media content strategy for WalkTall — editorial direction, red-carpet visual identity and platform plan, presented in Canva.",
     url: "https://canva.link/3we18vwytz709fe",
+  },
+];
+
+export const flyers = [
+  {
+    image: flyer01,
+    title: "Flyer Design 01",
+    category: "Flyer Design",
+    description: "Placeholder artwork — send your flyer and I'll swap it in.",
+  },
+  {
+    image: flyer02,
+    title: "Flyer Design 02",
+    category: "Flyer Design",
+    description: "Placeholder artwork — send your flyer and I'll swap it in.",
+  },
+  {
+    image: flyer03,
+    title: "Flyer Design 03",
+    category: "Flyer Design",
+    description: "Placeholder artwork — send your flyer and I'll swap it in.",
   },
 ];
