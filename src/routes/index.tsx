@@ -39,6 +39,7 @@ function Index() {
         <Certificates />
         <Works />
         <Flyers />
+        <Logos />
         <Contact />
       </main>
       <Footer />
