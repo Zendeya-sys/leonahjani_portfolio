@@ -6,6 +6,10 @@ import courseraCover from "@/assets/coursera-cover.webp";
 import flyer01 from "@/assets/flyer-01.webp";
 import flyer02 from "@/assets/flyer-02.webp";
 import flyer03 from "@/assets/flyer-03.webp";
+import logo01 from "@/assets/logo-01.webp";
+import logo02 from "@/assets/logo-02.webp";
+import logo03 from "@/assets/logo-03.webp";
+import logo04 from "@/assets/logo-04.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
 export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
@@ -17,6 +21,7 @@ export const navLinks = [
   { label: "Certificates", href: "#certificates" },
   { label: "Works", href: "#works" },
   { label: "Flyers", href: "#flyers" },
+  { label: "Logos", href: "#logos" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -105,5 +110,32 @@ export const flyers = [
     title: "Flyer Design 03",
     category: "Flyer Design",
     description: "Placeholder artwork — send your flyer and I'll swap it in.",
+  },
+];
+
+export const logos = [
+  {
+    image: logo01,
+    title: "Logo Concept 01",
+    category: "Logo Design",
+    description: "Placeholder mark — send your logo and I'll swap it in.",
+  },
+  {
+    image: logo02,
+    title: "Logo Concept 02",
+    category: "Logo Design",
+    description: "Placeholder mark — send your logo and I'll swap it in.",
+  },
+  {
+    image: logo03,
+    title: "Logo Concept 03",
+    category: "Logo Design",
+    description: "Placeholder mark — send your logo and I'll swap it in.",
+  },
+  {
+    image: logo04,
+    title: "Logo Concept 04",
+    category: "Logo Design",
+    description: "Placeholder mark — send your logo and I'll swap it in.",
   },
 ];
