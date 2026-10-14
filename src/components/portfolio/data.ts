@@ -1,6 +1,7 @@
 import workEmail from "@/assets/work-email-marketing.webp";
 import workBrandBook from "@/assets/work-brand-book.webp";
 import workInfluencerBrief from "@/assets/work-influencer-brief.webp";
+import workSocialStrategy from "@/assets/work-social-media-strategy.webp";
 import courseraCover from "@/assets/coursera-cover.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
@@ -71,5 +72,13 @@ export const works = [
     description:
       "An influencer campaign brief with a two-week content calendar for a creator-led promotion, presented in Canva.",
     url: "https://canva.link/osdjj2wwx5au52m",
+  },
+  {
+    image: workSocialStrategy,
+    title: "WalkTall — Social Media Content Strategy",
+    category: "Social Media Strategy · Fashion & Lifestyle",
+    description:
+      "A social media content strategy for WalkTall — editorial direction, red-carpet visual identity and platform plan, presented in Canva.",
+    url: "https://canva.link/3we18vwytz709fe",
   },
 ];

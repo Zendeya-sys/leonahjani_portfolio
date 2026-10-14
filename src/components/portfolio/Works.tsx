@@ -22,7 +22,7 @@ export function Works() {
           {works.map((w) => (
             <li
               key={w.title}
-              className="card-surface group w-full shrink-0 snap-start overflow-hidden sm:w-[440px]"
+              className="card-surface group flex w-full shrink-0 snap-start flex-col overflow-hidden sm:w-[440px]"
             >
               <div className="aspect-video overflow-hidden border-b border-border bg-surface">
                 <img
@@ -34,7 +34,7 @@ export function Works() {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
               </div>
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
                   {w.category}
                 </p>
@@ -46,7 +46,7 @@ export function Works() {
                   href={w.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-dark transition-colors hover:text-primary"
+                  className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-primary-dark transition-colors hover:text-primary"
                 >
                   View Project <ArrowUpRight size={16} />
                 </a>
