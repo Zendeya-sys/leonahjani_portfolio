@@ -24,7 +24,7 @@ export function Works() {
               key={w.title}
               className="card-surface group flex w-full flex-col overflow-hidden"
             >
-              <div className="aspect-[3/2] overflow-hidden border-b border-border bg-surface">
+              <div className="aspect-video overflow-hidden border-b border-border bg-surface">
 
                 <img
                   src={w.image}
