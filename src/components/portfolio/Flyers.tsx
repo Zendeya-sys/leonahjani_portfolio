@@ -23,8 +23,9 @@ export function Flyers() {
               <img
                 src={f.image}
                 alt={`${f.title} flyer design`}
-                width={675}
-                height={900}
+                width={1050}
+                height={700}
+
                 loading="lazy"
                 decoding="async"
                 className="aspect-[3/2] w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
