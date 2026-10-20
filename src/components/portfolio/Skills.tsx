@@ -46,18 +46,18 @@ export function Skills() {
           </p>
         </div>
 
-        <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+        <ul className="mt-12 flex flex-wrap gap-3 sm:gap-4">
           {tools.map((tool, i) => {
             const Icon = icons[i % icons.length]!;
             return (
-              <li key={tool.name} className="card-surface group p-5 sm:p-6">
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary-dark transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <Icon size={22} strokeWidth={2} />
+              <li key={tool.name}>
+                <span
+                  title={`${tool.name} — ${tool.label}`}
+                  className="tool-pill"
+                >
+                  <Icon size={18} strokeWidth={2} className="shrink-0" />
+                  {tool.name}
                 </span>
-                <h3 className="mt-4 text-sm font-bold tracking-tight sm:text-base">{tool.name}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                  {tool.label}
-                </p>
               </li>
             );
           })}
