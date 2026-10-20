@@ -6,10 +6,10 @@ import courseraCover from "@/assets/coursera-cover.webp";
 import flyer01 from "@/assets/flyer-01.webp";
 import flyer02 from "@/assets/flyer-02.webp";
 import flyer03 from "@/assets/flyer-03.webp";
-import logo01 from "@/assets/logo-01.webp";
-import logo02 from "@/assets/logo-02.webp";
-import logo03 from "@/assets/logo-03.webp";
-import logo04 from "@/assets/logo-04.webp";
+import card01 from "@/assets/card-01.webp";
+import card02 from "@/assets/card-02.webp";
+import card03 from "@/assets/card-03.webp";
+import card04 from "@/assets/card-04.webp";
 
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
 export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
@@ -20,8 +20,8 @@ export const navLinks = [
   { label: "Skills & Tools", href: "#skills" },
   { label: "Certificates", href: "#certificates" },
   { label: "Works", href: "#works" },
-  { label: "Flyers", href: "#flyers" },
-  { label: "Logos", href: "#logos" },
+  { label: "Designs", href: "#flyers" },
+  { label: "Business Cards", href: "#cards" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -113,29 +113,29 @@ export const flyers = [
   },
 ];
 
-export const logos = [
+export const businessCards = [
   {
-    image: logo01,
-    title: "Logo Concept 01",
-    category: "Logo Design",
-    description: "Placeholder mark — send your logo and I'll swap it in.",
+    image: card01,
+    title: "Business Card 01",
+    category: "Business Card",
+    description: "Placeholder layout — send your card design and I'll swap it in.",
   },
   {
-    image: logo02,
-    title: "Logo Concept 02",
-    category: "Logo Design",
-    description: "Placeholder mark — send your logo and I'll swap it in.",
+    image: card02,
+    title: "Business Card 02",
+    category: "Business Card",
+    description: "Placeholder layout — send your card design and I'll swap it in.",
   },
   {
-    image: logo03,
-    title: "Logo Concept 03",
-    category: "Logo Design",
-    description: "Placeholder mark — send your logo and I'll swap it in.",
+    image: card03,
+    title: "Business Card 03",
+    category: "Business Card",
+    description: "Placeholder layout — send your card design and I'll swap it in.",
   },
   {
-    image: logo04,
-    title: "Logo Concept 04",
-    category: "Logo Design",
-    description: "Placeholder mark — send your logo and I'll swap it in.",
+    image: card04,
+    title: "Business Card 04",
+    category: "Business Card",
+    description: "Placeholder layout — send your card design and I'll swap it in.",
   },
 ];
