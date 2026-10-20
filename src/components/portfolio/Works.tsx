@@ -18,13 +18,14 @@ export function Works() {
           </p>
         </div>
 
-        <ul className="no-scrollbar -mx-5 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-4 lg:mx-0 lg:px-0">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {works.map((w) => (
             <li
               key={w.title}
-              className="card-surface group flex w-[280px] shrink-0 snap-start flex-col overflow-hidden sm:w-[320px]"
+              className="card-surface group flex w-full flex-col overflow-hidden"
             >
-              <div className="aspect-video overflow-hidden border-b border-border bg-surface">
+              <div className="aspect-[3/2] overflow-hidden border-b border-border bg-surface">
+
                 <img
                   src={w.image}
                   alt={`${w.title} project preview`}
@@ -34,11 +35,12 @@ export function Works() {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
               </div>
-              <div className="flex flex-1 flex-col p-6">
+              <div className="flex flex-1 flex-col p-5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
                   {w.category}
                 </p>
-                <h3 className="mt-2 text-lg font-bold tracking-tight">{w.title}</h3>
+                <h3 className="mt-2 text-base font-bold tracking-tight">{w.title}</h3>
+
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {w.description}
                 </p>

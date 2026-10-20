@@ -17,7 +17,7 @@ export function Flyers() {
           </p>
         </div>
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {flyers.map((f) => (
             <li key={f.title} className="card-surface group overflow-hidden">
               <img
@@ -27,7 +27,7 @@ export function Flyers() {
                 height={900}
                 loading="lazy"
                 decoding="async"
-                className="aspect-[3/4] w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                className="aspect-[3/2] w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
               <div className="p-5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">

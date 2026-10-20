@@ -15,12 +15,13 @@ export function Certificates() {
           </div>
         </div>
 
-        <ul className="no-scrollbar -mx-5 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-4 lg:mx-0 lg:px-0">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {certificates.map((c) => (
             <li
               key={c.title}
-              className="card-surface w-[280px] shrink-0 snap-start overflow-hidden sm:w-[320px]"
+              className="card-surface overflow-hidden"
             >
+
               <img
                 src={c.image}
                 alt="Coursera"
@@ -28,7 +29,7 @@ export function Certificates() {
                 height={447}
                 loading="lazy"
                 decoding="async"
-                className="aspect-[2/1] w-full border-b border-border object-cover"
+                className="aspect-[3/2] w-full border-b border-border object-cover"
               />
               <div className="p-5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
