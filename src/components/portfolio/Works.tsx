@@ -18,11 +18,11 @@ export function Works() {
           </p>
         </div>
 
-        <ul className="no-scrollbar -mx-5 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-4 lg:mx-0 lg:px-0">
+        <ul className="no-scrollbar -mx-5 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-4 lg:mx-0 lg:px-0">
           {works.map((w) => (
             <li
               key={w.title}
-              className="card-surface group flex w-full shrink-0 snap-start flex-col overflow-hidden sm:w-[440px]"
+              className="card-surface group flex w-[280px] shrink-0 snap-start flex-col overflow-hidden sm:w-[320px]"
             >
               <div className="aspect-video overflow-hidden border-b border-border bg-surface">
                 <img
