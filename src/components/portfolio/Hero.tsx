@@ -1,7 +1,6 @@
 import { ArrowRight, ArrowUpRight, User } from "lucide-react";
 import heroMarketing from "@/assets/hero-marketing-transparent.webp";
 import { works, tools, CV_URL, CV_FILENAME } from "./data";
-import { SocialRow } from "./Socials";
 
 const YEARS_EXPERIENCE = "1";
 
@@ -72,7 +71,7 @@ export function Hero() {
                 />
               </div>
 
-              <div className="absolute -bottom-6 right-0 w-60 rounded-2xl border border-border/60 bg-card/85 p-5 shadow-[var(--shadow-lift)] backdrop-blur-sm sm:w-64 sm:-right-2 lg:-right-4">
+              <div className="glass-card absolute -bottom-6 right-0 w-60 p-5 sm:w-64 sm:-right-2 lg:-right-4">
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary-dark">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
                   Available for work
@@ -91,10 +90,6 @@ export function Hero() {
                   Download Resume
                 </a>
               </div>
-            </div>
-
-            <div className="mt-14 w-full rounded-xl border border-border bg-card/80 px-4 py-3 backdrop-blur-sm">
-              <SocialRow />
             </div>
           </div>
         </div>
