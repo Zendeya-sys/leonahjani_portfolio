@@ -54,42 +54,44 @@ export function Hero() {
         {/* Right column — circular portrait with floating availability card */}
         <div className="relative">
           <div className="relative mx-auto flex max-w-md flex-col items-center lg:max-w-none">
-            <div
-              className="relative grid aspect-square w-full max-w-lg place-items-center overflow-hidden rounded-full bg-surface"
-              aria-hidden={false}
-            >
-              <img
-                src={heroMarketing}
-                alt="Illustration of two marketing professionals connecting across a global network"
-                width={1000}
-                height={848}
-                fetchPriority="high"
-                decoding="async"
-                className="w-[78%] object-contain drop-shadow-sm"
-              />
-            </div>
-
-            <div className="absolute -bottom-4 right-0 w-64 rounded-2xl border border-border/60 bg-card/85 p-5 shadow-[var(--shadow-lift)] backdrop-blur-sm sm:-right-2 lg:-right-4">
-              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary-dark">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
-                Available for work
-              </span>
-              <p className="mt-3 text-sm leading-relaxed text-foreground">
-                I&rsquo;m currently accepting{" "}
-                <span className="font-bold text-charcoal">new projects</span> worldwide.
-              </p>
-              <a
-                href={CV_URL}
-                download={CV_FILENAME}
-                aria-label={`Download Leonah Jani's CV as a PDF (${CV_FILENAME})`}
-                className="mt-4 inline-flex items-center gap-2 border-t border-border pt-3 text-sm font-bold text-charcoal transition-colors hover:text-primary-dark"
+            <div className="relative w-full max-w-md lg:max-w-lg">
+              <div
+                className="grid aspect-square w-full place-items-center overflow-hidden rounded-full bg-surface"
+                aria-hidden={false}
               >
-                <ArrowUpRight size={16} className="text-primary-dark" />
-                Download Resume
-              </a>
+                <img
+                  src={heroMarketing}
+                  alt="Illustration of two marketing professionals connecting across a global network"
+                  width={1000}
+                  height={848}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-[78%] object-contain drop-shadow-sm"
+                />
+              </div>
+
+              <div className="absolute -bottom-6 right-0 w-60 rounded-2xl border border-border/60 bg-card/85 p-5 shadow-[var(--shadow-lift)] backdrop-blur-sm sm:w-64 sm:-right-2 lg:-right-4">
+                <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary-dark">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
+                  Available for work
+                </span>
+                <p className="mt-3 text-sm leading-relaxed text-foreground">
+                  I&rsquo;m currently accepting{" "}
+                  <span className="font-bold text-charcoal">new projects</span> worldwide.
+                </p>
+                <a
+                  href={CV_URL}
+                  download={CV_FILENAME}
+                  aria-label={`Download Leonah Jani's CV as a PDF (${CV_FILENAME})`}
+                  className="mt-4 flex items-center gap-2 border-t border-border pt-3 text-sm font-bold text-charcoal transition-colors hover:text-primary-dark"
+                >
+                  <ArrowUpRight size={16} className="text-primary-dark" />
+                  Download Resume
+                </a>
+              </div>
             </div>
 
-            <div className="mt-6 w-full rounded-xl border border-border bg-card/80 px-4 py-3 backdrop-blur-sm lg:mt-10">
+            <div className="mt-14 w-full rounded-xl border border-border bg-card/80 px-4 py-3 backdrop-blur-sm">
               <SocialRow />
             </div>
           </div>
