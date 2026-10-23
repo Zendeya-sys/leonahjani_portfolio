@@ -8,7 +8,9 @@ const YEARS_EXPERIENCE = "1";
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:pb-24 lg:pt-20">
+      <div className="hero-glow" aria-hidden />
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:pb-24 lg:pt-20">
+
         {/* Left column — intro */}
         <div className="max-w-2xl">
           <h1 className="font-display text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -56,7 +58,7 @@ export function Hero() {
           <div className="relative mx-auto flex max-w-md flex-col items-center lg:max-w-none">
             <div className="relative w-full max-w-md lg:max-w-lg">
               <div
-                className="grid aspect-square w-full place-items-center overflow-hidden rounded-full bg-surface"
+                className="hero-circle grid aspect-square w-full place-items-center overflow-hidden rounded-full"
                 aria-hidden={false}
               >
                 <img
