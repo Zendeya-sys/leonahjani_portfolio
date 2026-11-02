@@ -92,11 +92,14 @@ export function Contact() {
             </div>
 
             <ul className="mt-9 flex flex-wrap items-center gap-3">
-              {socials.map(({ label, Icon }) => (
+              {socials.map(({ label, Icon, url }) => (
                 <li key={label}>
                   <a
-                    href="#contact"
+                    href={url}
                     aria-label={label}
+                    {...(url.startsWith("http")
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                     className="grid h-11 w-11 place-items-center rounded-xl bg-card text-primary-dark shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground"
                   >
                     <Icon size={18} strokeWidth={2} />
