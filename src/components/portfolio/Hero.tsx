@@ -38,7 +38,7 @@ export function Hero() {
             </a>
           </div>
 
-          <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
+          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4">
             {[
               [YEARS_EXPERIENCE, "Year creating"],
               [String(works.length), "Projects delivered"],
