@@ -29,7 +29,7 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a href="#contact" className="btn-base btn-lime hidden rounded-xl px-6 sm:inline-flex">
+            <a href="#contact" className="btn-base btn-lime hidden px-6 sm:inline-flex">
               Hire Me
             </a>
             <button

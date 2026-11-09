@@ -37,7 +37,7 @@ export function Certificates() {
                 </p>
                 <h3 className="mt-2 min-h-12 text-base font-bold leading-snug">{c.title}</h3>
                 <p className="mt-1 text-xs text-muted-foreground">{c.meta}</p>
-                <Button asChild className="btn-base btn-lime mt-4 w-full text-sm">
+                <Button asChild className="btn-base btn-lime mt-4 w-full rounded-full text-sm">
                   <a href={c.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${c.title} certificate (PDF, opens in a new tab)`}>
                     View Certificate <ArrowUpRight size={14} />
                   </a>
