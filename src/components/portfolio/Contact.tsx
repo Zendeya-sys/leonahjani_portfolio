@@ -162,7 +162,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={sending}
-              className="mt-auto flex w-full items-center justify-center gap-2.5 rounded-lg bg-primary py-3.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-lime)] transition-colors hover:bg-primary-dark disabled:opacity-70"
+              className="mt-auto flex w-full items-center justify-center gap-2.5 rounded-full bg-primary py-3.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-lime)] transition-colors hover:bg-primary-dark disabled:opacity-70"
             >
               {sending ? "Sending…" : "Send Message"} <Send size={16} />
             </button>
