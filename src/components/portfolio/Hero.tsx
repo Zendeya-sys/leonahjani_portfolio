@@ -84,7 +84,7 @@ export function Hero() {
                   href={CV_URL}
                   download={CV_FILENAME}
                   aria-label={`Download Leonah Jani's CV as a PDF (${CV_FILENAME})`}
-                  className="mt-4 flex items-center gap-2 border-t border-border pt-3 text-sm font-bold text-charcoal transition-colors hover:text-primary-dark"
+                  className="mt-5 flex items-center gap-2 text-sm font-bold text-charcoal transition-colors hover:text-primary-dark"
                 >
                   <ArrowUpRight size={16} className="text-primary-dark" />
                   Download Resume
