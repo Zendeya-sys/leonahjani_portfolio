@@ -55,6 +55,20 @@ export const certificates = [
     image: courseraCover,
     url: "/certificates/digital-branding-brand-strategy.pdf",
   },
+  {
+    platform: "Coursera",
+    title: "Google Ads for Beginners",
+    meta: "Completed · 13 July 2026",
+    image: courseraCover,
+    url: "/certificates/google-ads-for-beginners.pdf",
+  },
+  {
+    platform: "Coursera · Google",
+    title: "AI Fundamentals",
+    meta: "Completed · 7 July 2026",
+    image: courseraCover,
+    url: "/certificates/ai-fundamentals.pdf",
+  },
 ];
 
 export const works = [
