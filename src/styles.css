@@ -155,6 +155,7 @@
 }
 
 @utility btn-lime {
+  border: 1px solid transparent;
   background-color: var(--primary);
   color: var(--primary-foreground);
   box-shadow: var(--shadow-lime);
