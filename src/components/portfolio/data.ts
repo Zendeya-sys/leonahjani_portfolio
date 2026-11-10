@@ -109,21 +109,25 @@ export const works = [
 export const flyers = [
   {
     image: flyer01,
-    title: "Flyer Design 01",
-    category: "Flyer Design",
-    description: "Placeholder artwork — send your flyer and I'll swap it in.",
+    title: "FIVO Beverages — Three Flavours",
+    category: "Flyer Design · Beverage Brand",
+    description:
+      "A three-band promotional flyer for FIVO's matcha, strawberry and chocolate shakes — bold flavour blocking, playful type and a clear call to order.",
+    url: "https://canva.link/tlt9a2th6k2w0z9",
   },
   {
     image: flyer02,
     title: "Flyer Design 02",
     category: "Flyer Design",
     description: "Placeholder artwork — send your flyer and I'll swap it in.",
+    url: "",
   },
   {
     image: flyer03,
     title: "Flyer Design 03",
     category: "Flyer Design",
     description: "Placeholder artwork — send your flyer and I'll swap it in.",
+    url: "",
   },
 ];
 
