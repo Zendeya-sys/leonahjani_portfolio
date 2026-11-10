@@ -6,6 +6,7 @@ import courseraCover from "@/assets/coursera-cover.webp";
 import flyer01 from "@/assets/flyer-01.webp";
 import flyer02 from "@/assets/flyer-02.webp";
 import flyer03 from "@/assets/flyer-03.webp";
+import flyer04 from "@/assets/flyer-04.webp";
 import card01 from "@/assets/card-01.webp";
 import card02 from "@/assets/card-02.webp";
 import card03 from "@/assets/card-03.webp";
@@ -133,6 +134,15 @@ export const flyers = [
       "A product flyer for Walktall heels — warm neutral styling, a bold price badge and a 'wear it with' guide that pairs the shoe with four outfits.",
     url: "https://canva.link/tlt9a2th6k2w0z9",
     ratio: "864/1222",
+  },
+  {
+    image: flyer04,
+    title: "FIVO Beverages — Pure Matcha",
+    category: "Poster Design · Beverage Brand",
+    description:
+      "A matcha poster for FIVO Beverages — deep forest-green styling, a splashing cup of ceremonial-grade matcha and a benefits strip along the bottom.",
+    url: "",
+    ratio: "736/1307",
   },
 ];
 
