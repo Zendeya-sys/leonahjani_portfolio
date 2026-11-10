@@ -5,6 +5,7 @@ import workSocialStrategy from "@/assets/work-social-media-strategy.webp";
 import courseraCover from "@/assets/coursera-cover.webp";
 import flyer01 from "@/assets/flyer-01.webp";
 import flyer02 from "@/assets/flyer-02.webp";
+import flyer03 from "@/assets/flyer-03.webp";
 import card01 from "@/assets/card-01.webp";
 import card02 from "@/assets/card-02.webp";
 import card03 from "@/assets/card-03.webp";
