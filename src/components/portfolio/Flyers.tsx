@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { flyers } from "./data";
 
 export function Flyers() {
@@ -19,18 +20,20 @@ export function Flyers() {
 
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {flyers.map((f) => (
-            <li key={f.title} className="card-surface group overflow-hidden">
+            <li
+              key={f.title}
+              className="card-surface group flex w-full flex-col overflow-hidden"
+            >
               <img
                 src={f.image}
                 alt={`${f.title} flyer design`}
-                width={1050}
-                height={700}
-
+                width={864}
+                height={1080}
                 loading="lazy"
                 decoding="async"
-                className="aspect-[3/2] w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                className="aspect-[4/5] w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
                   {f.category}
                 </p>
@@ -38,6 +41,16 @@ export function Flyers() {
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                   {f.description}
                 </p>
+                {f.url ? (
+                  <a
+                    href={f.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-primary-dark transition-colors hover:text-primary"
+                  >
+                    View Design <ArrowUpRight size={16} />
+                  </a>
+                ) : null}
               </div>
             </li>
           ))}
