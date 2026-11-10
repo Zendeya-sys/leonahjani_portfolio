@@ -27,8 +27,8 @@ export function Flyers() {
               <img
                 src={f.image}
                 alt={`${f.title} flyer design`}
-                width={864}
-                height={1080}
+                width={Number(f.ratio.split("/")[0])}
+                height={Number(f.ratio.split("/")[1])}
                 loading="lazy"
                 decoding="async"
                 style={{ aspectRatio: f.ratio }}
