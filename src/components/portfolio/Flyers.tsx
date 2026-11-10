@@ -18,11 +18,11 @@ export function Flyers() {
           </p>
         </div>
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-12 flex flex-wrap justify-center gap-6">
           {flyers.map((f) => (
             <li
               key={f.title}
-              className="card-surface group flex w-full flex-col overflow-hidden"
+              className="card-surface group flex w-full flex-col overflow-hidden sm:w-[calc(50%-0.75rem)] lg:w-[286px]"
             >
               <img
                 src={f.image}
