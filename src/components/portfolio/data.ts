@@ -5,7 +5,6 @@ import workSocialStrategy from "@/assets/work-social-media-strategy.webp";
 import courseraCover from "@/assets/coursera-cover.webp";
 import flyer01 from "@/assets/flyer-01.webp";
 import flyer02 from "@/assets/flyer-02.webp";
-import flyer03 from "@/assets/flyer-03.webp";
 import card01 from "@/assets/card-01.webp";
 import card02 from "@/assets/card-02.webp";
 import card03 from "@/assets/card-03.webp";
@@ -117,17 +116,11 @@ export const flyers = [
   },
   {
     image: flyer02,
-    title: "Flyer Design 02",
-    category: "Flyer Design",
-    description: "Placeholder artwork — send your flyer and I'll swap it in.",
-    url: "",
-  },
-  {
-    image: flyer03,
-    title: "Flyer Design 03",
-    category: "Flyer Design",
-    description: "Placeholder artwork — send your flyer and I'll swap it in.",
-    url: "",
+    title: "Oreos Chocolate Shake",
+    category: "Flyer Design · Milkshake Promo",
+    description:
+      "A promo flyer for an Oreo chocolate shake — splash-driven product art, a hand-drawn price badge and a clear order-now call to action.",
+    url: "https://canva.link/tlt9a2th6k2w0z9",
   },
 ];
 
