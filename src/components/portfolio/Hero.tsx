@@ -1,5 +1,5 @@
 import { ArrowRight, ArrowUpRight, User } from "lucide-react";
-import heroMarketing from "@/assets/hero-marketing-transparent.webp";
+import heroPortrait from "@/assets/hero-portrait.webp";
 import { works, tools, CV_URL, CV_FILENAME } from "./data";
 
 const YEARS_EXPERIENCE = "1";
@@ -57,17 +57,17 @@ export function Hero() {
           <div className="relative mx-auto flex max-w-md flex-col items-center lg:max-w-none">
             <div className="relative w-full max-w-md lg:max-w-lg">
               <div
-                className="hero-circle grid aspect-square w-full place-items-center overflow-hidden rounded-full"
+                className="hero-circle relative grid aspect-square w-full place-items-center overflow-hidden rounded-full"
                 aria-hidden={false}
               >
                 <img
-                  src={heroMarketing}
-                  alt="Illustration of two marketing professionals connecting across a global network"
-                  width={1000}
-                  height={848}
+                  src={heroPortrait}
+                  alt="3D illustration of Leonah Jani sitting cross-legged with a tablet and stylus, wearing a black sweatshirt reading Design, Create, Inspire"
+                  width={559}
+                  height={766}
                   fetchPriority="high"
                   decoding="async"
-                  className="w-[78%] object-contain drop-shadow-sm"
+                  className="absolute inset-0 h-full w-full object-contain p-[9%] drop-shadow-sm"
                 />
               </div>
 
