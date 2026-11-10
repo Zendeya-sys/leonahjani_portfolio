@@ -5,6 +5,7 @@ import workSocialStrategy from "@/assets/work-social-media-strategy.webp";
 import courseraCover from "@/assets/coursera-cover.webp";
 import flyer01 from "@/assets/flyer-01.webp";
 import flyer02 from "@/assets/flyer-02.webp";
+import flyer03 from "@/assets/flyer-03.webp";
 import card01 from "@/assets/card-01.webp";
 import card02 from "@/assets/card-02.webp";
 import card03 from "@/assets/card-03.webp";
@@ -113,6 +114,7 @@ export const flyers = [
     description:
       "A three-band promotional flyer for FIVO's matcha, strawberry and chocolate shakes — bold flavour blocking, playful type and a clear call to order.",
     url: "https://canva.link/tlt9a2th6k2w0z9",
+    ratio: "864/1080",
   },
   {
     image: flyer02,
@@ -121,6 +123,16 @@ export const flyers = [
     description:
       "A promo flyer for an Oreo chocolate shake — splash-driven product art, a hand-drawn price badge and a clear order-now call to action.",
     url: "https://canva.link/tlt9a2th6k2w0z9",
+    ratio: "864/1080",
+  },
+  {
+    image: flyer03,
+    title: "Walktall — Heels",
+    category: "Flyer Design · Footwear Promo",
+    description:
+      "A product flyer for Walktall heels — warm neutral styling, a bold price badge and a 'wear it with' guide that pairs the shoe with four outfits.",
+    url: "https://canva.link/tlt9a2th6k2w0z9",
+    ratio: "864/1222",
   },
 ];
 

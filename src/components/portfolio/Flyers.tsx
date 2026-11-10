@@ -27,11 +27,12 @@ export function Flyers() {
               <img
                 src={f.image}
                 alt={`${f.title} flyer design`}
-                width={864}
-                height={1080}
+                width={Number(f.ratio.split("/")[0])}
+                height={Number(f.ratio.split("/")[1])}
                 loading="lazy"
                 decoding="async"
-                className="aspect-[4/5] w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                style={{ aspectRatio: f.ratio }}
+                className="w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
               <div className="flex flex-1 flex-col p-5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
