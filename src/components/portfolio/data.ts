@@ -84,7 +84,7 @@ export const works = [
   {
     image: workBrandBook,
     title: "WalkTall — Red Heels for Her",
-    category: "Brand Book · Fashion & Lifestyle",
+    category: "Brand Book · Fashion",
     description:
       "An editorial brand book for WalkTall — modern fashion lookbook, trend forecast and lifestyle identity, presented in Canva.",
     url: "https://canva.link/3brsmg04nr7nwd0",
@@ -92,7 +92,7 @@ export const works = [
   {
     image: workInfluencerBrief,
     title: "Influencer Marketing Campaign Brief",
-    category: "Influencer Marketing · Campaign Brief",
+    category: "Influencer Marketing · Brief",
     description:
       "An influencer campaign brief with a two-week content calendar for a creator-led promotion, presented in Canva.",
     url: "https://canva.link/osdjj2wwx5au52m",
@@ -100,7 +100,7 @@ export const works = [
   {
     image: workSocialStrategy,
     title: "WalkTall — Social Media Content Strategy",
-    category: "Social Media Strategy · Fashion & Lifestyle",
+    category: "Social Media · Fashion",
     description:
       "A social media content strategy for WalkTall — editorial direction, red-carpet visual identity and platform plan, presented in Canva.",
     url: "https://canva.link/3we18vwytz709fe",

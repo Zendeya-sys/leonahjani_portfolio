@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { works } from "./data";
 
 export function Works() {
@@ -22,36 +23,43 @@ export function Works() {
           {works.map((w) => (
             <li
               key={w.title}
-              className="card-surface group flex w-full flex-col overflow-hidden"
+              className="card-surface group flex w-full flex-col overflow-hidden lg:h-[376px]"
             >
               <div className="aspect-video overflow-hidden border-b border-border bg-surface">
-
                 <img
                   src={w.image}
                   alt={`${w.title} project preview`}
                   width={1280}
                   height={720}
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
               </div>
-              <div className="flex flex-1 flex-col p-5">
+              <div className="flex flex-1 flex-col px-5 py-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
                   {w.category}
                 </p>
-                <h3 className="mt-2 text-base font-bold tracking-tight">{w.title}</h3>
-
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="mt-2 min-h-12 text-base font-bold leading-snug">{w.title}</h3>
+                <p
+                  className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground"
+                  title={w.description}
+                >
                   {w.description}
                 </p>
-                <a
-                  href={w.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-primary-dark transition-colors hover:text-primary"
+                <Button
+                  asChild
+                  className="btn-base btn-lime mt-auto w-full rounded-full text-sm"
                 >
-                  View Project <ArrowUpRight size={16} />
-                </a>
+                  <a
+                    href={w.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${w.title} project (opens in a new tab)`}
+                  >
+                    View Project <ArrowUpRight size={14} />
+                  </a>
+                </Button>
               </div>
             </li>
           ))}
