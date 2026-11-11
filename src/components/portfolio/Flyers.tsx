@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { flyers } from "./data";
 
 export function Flyers() {
@@ -18,11 +19,11 @@ export function Flyers() {
           </p>
         </div>
 
-        <ul className="mt-12 flex flex-wrap justify-center gap-6">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {flyers.map((f) => (
             <li
               key={f.title}
-              className="card-surface group flex w-full flex-col overflow-hidden sm:w-[calc(50%-0.75rem)] lg:w-[286px]"
+              className="card-surface flex flex-col overflow-hidden"
             >
               <img
                 src={f.image}
@@ -31,26 +32,22 @@ export function Flyers() {
                 height={Number(f.ratio.split("/")[1])}
                 loading="lazy"
                 decoding="async"
-                style={{ aspectRatio: f.ratio }}
-                className="w-full border-b border-border object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                className="aspect-[3/2] w-full border-b border-border object-contain"
               />
               <div className="flex flex-1 flex-col p-5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
                   {f.category}
                 </p>
-                <h3 className="mt-2 text-base font-bold leading-snug">{f.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                <h3 className="mt-2 min-h-12 text-base font-bold leading-snug">{f.title}</h3>
+                <p className="mt-1 line-clamp-1 text-xs text-muted-foreground" title={f.description}>
                   {f.description}
                 </p>
                 {f.url ? (
-                  <a
-                    href={f.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-primary-dark transition-colors hover:text-primary"
-                  >
-                    View Design <ArrowUpRight size={16} />
-                  </a>
+                  <Button asChild className="btn-base btn-lime mt-4 w-full rounded-full text-sm">
+                    <a href={f.url} target="_blank" rel="noopener noreferrer">
+                      View Design <ArrowUpRight size={14} />
+                    </a>
+                  </Button>
                 ) : null}
               </div>
             </li>
