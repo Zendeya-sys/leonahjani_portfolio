@@ -21,8 +21,11 @@ export function Works() {
 
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {works.map((w) => (
-            <li key={w.title} className="card-surface group flex w-full flex-col overflow-hidden">
-              <div className="aspect-[3/2] overflow-hidden border-b border-border bg-surface">
+            <li
+              key={w.title}
+              className="card-surface group flex w-full flex-col overflow-hidden lg:h-[376px]"
+            >
+              <div className="aspect-video overflow-hidden border-b border-border bg-surface">
                 <img
                   src={w.image}
                   alt={`${w.title} project preview`}
@@ -33,18 +36,21 @@ export function Works() {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
               </div>
-              <div className="flex flex-1 flex-col p-5">
+              <div className="flex flex-1 flex-col px-5 py-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-dark">
                   {w.category}
                 </p>
                 <h3 className="mt-2 min-h-12 text-base font-bold leading-snug">{w.title}</h3>
                 <p
-                  className="mt-1 line-clamp-1 text-xs text-muted-foreground"
+                  className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground"
                   title={w.description}
                 >
                   {w.description}
                 </p>
-                <Button asChild className="btn-base btn-lime mt-4 w-full rounded-full text-sm">
+                <Button
+                  asChild
+                  className="btn-base btn-lime mt-auto w-full rounded-full text-sm"
+                >
                   <a
                     href={w.url}
                     target="_blank"
