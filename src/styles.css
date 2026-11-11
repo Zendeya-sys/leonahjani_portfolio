@@ -311,3 +311,34 @@
     var(--shadow-lift);
 }
 
+
+:root {
+  --stat-blue: oklch(0.62 0.19 255);
+  --stat-red: oklch(0.63 0.22 25);
+}
+
+/* Hero entrance motion */
+@keyframes hero-in-left { from { opacity: 0; transform: translateX(-70px); } to { opacity: 1; transform: none; } }
+@keyframes hero-in-right { from { opacity: 0; transform: translateX(90px) rotate(4deg); } to { opacity: 1; transform: none; } }
+@keyframes hero-in-up { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: none; } }
+@keyframes hero-in-down { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: none; } }
+@keyframes hero-in-zoom { from { opacity: 0; transform: scale(0.7); } to { opacity: 1; transform: none; } }
+@keyframes ring-spin { to { transform: rotate(360deg); } }
+
+@utility hero-anim {
+  opacity: 0;
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: forwards;
+}
+@utility in-left { animation-name: hero-in-left; }
+@utility in-right { animation-name: hero-in-right; }
+@utility in-up { animation-name: hero-in-up; }
+@utility in-down { animation-name: hero-in-down; }
+@utility in-zoom { animation-name: hero-in-zoom; }
+@utility ring-spin { animation: ring-spin 2.4s linear infinite; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim { animation: none !important; opacity: 1 !important; }
+  .ring-spin { animation: none !important; }
+}
