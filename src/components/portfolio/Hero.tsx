@@ -1,8 +1,50 @@
+import { useEffect, useState } from "react";
 import { ArrowRight, ArrowUpRight, User } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.webp";
 import { works, tools, CV_URL, CV_FILENAME } from "./data";
 
-const YEARS_EXPERIENCE = "1";
+const YEARS_EXPERIENCE = 1;
+
+const d = (ms: number) => ({ animationDelay: `${ms}ms` });
+
+function StatRing({ value, label, color, delay }: { value: number; label: string; color: string; delay: number }) {
+  const [n, setN] = useState(0);
+  const [p, setP] = useState(0);
+  useEffect(() => {
+    let raf = 0;
+    const dur = 1600;
+    const timer = setTimeout(() => {
+      const start = performance.now();
+      const tick = (t: number) => {
+        const k = Math.min(1, (t - start) / dur);
+        const e = 1 - Math.pow(1 - k, 3);
+        setP(e);
+        setN(Math.round(e * value));
+        if (k < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    }, delay);
+    return () => { clearTimeout(timer); cancelAnimationFrame(raf); };
+  }, [value, delay]);
+  const r = 34, c = 2 * Math.PI * r;
+  return (
+    <div className="hero-anim in-up flex flex-col items-center text-center" style={d(delay - 300)}>
+      <div className="relative h-20 w-20 sm:h-24 sm:w-24">
+        <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90">
+          <circle cx="40" cy="40" r={r} fill="var(--background)" stroke="var(--border)" strokeWidth="5" />
+          <circle cx="40" cy="40" r={r} fill="none" stroke={color} strokeWidth="5" strokeLinecap="round"
+            strokeDasharray={c} strokeDashoffset={c * (1 - p)} />
+        </svg>
+        <svg viewBox="0 0 80 80" className="ring-spin absolute inset-0 h-full w-full" aria-hidden>
+          <circle cx="40" cy="40" r="39" fill="none" stroke={color} strokeOpacity="0.45" strokeWidth="1.5"
+            strokeDasharray="30 215" strokeLinecap="round" />
+        </svg>
+        <span className="absolute inset-0 grid place-items-center text-2xl font-extrabold text-charcoal sm:text-3xl">{n}</span>
+      </div>
+      <span className="mt-2 text-xs text-muted-foreground sm:text-sm">{label}</span>
+    </div>
+  );
+}
 
 export function Hero() {
   return (
@@ -12,44 +54,37 @@ export function Hero() {
 
         {/* Left column — intro */}
         <div className="max-w-2xl">
-          <h1 className="font-display text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 style={d(100)} className="hero-anim in-left font-display text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl xl:text-7xl">
             <span className="text-charcoal">Hi, I&rsquo;m</span>
             <br />
             <span className="text-primary">Leonah Jani.</span>
           </h1>
 
-          <p className="mt-6 text-base font-bold leading-snug text-charcoal sm:text-lg">
+          <p style={d(350)} className="hero-anim in-left mt-6 text-base font-bold leading-snug text-charcoal sm:text-lg">
             Digital Marketer &amp; Designer
             <br />
             based in <span className="text-primary">Harare, Zimbabwe.</span>
           </p>
 
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p style={d(550)} className="hero-anim in-up mt-5 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
             I help brands and creative businesses build meaningful digital experiences, strategic
             campaigns, and visually engaging identities.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#works" className="btn-base btn-lime">
+            <a href="#works" style={d(750)} className="hero-anim in-left btn-base btn-lime">
               View My Work <ArrowRight size={16} />
             </a>
-            <a href="#about" className="btn-base btn-outline">
+            <a href="#about" style={d(850)} className="hero-anim in-right btn-base btn-outline">
               About Me <User size={16} />
             </a>
           </div>
 
-          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4">
-            {[
-              [YEARS_EXPERIENCE, "Year creating"],
-              [String(works.length), "Projects delivered"],
-              [String(tools.length), "Tools mastered"],
-            ].map(([value, label]) => (
-              <div key={label} className="min-w-0">
-                <dt className="text-2xl font-extrabold tracking-tight sm:text-3xl">{value}</dt>
-                <dd className="mt-1 text-xs text-muted-foreground sm:text-sm">{label}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className="mt-12 flex max-w-lg flex-wrap gap-6 sm:gap-10">
+            <StatRing value={YEARS_EXPERIENCE} label="Year creating" color="var(--primary)" delay={1100} />
+            <StatRing value={works.length} label="Projects delivered" color="var(--stat-blue)" delay={1250} />
+            <StatRing value={tools.length} label="Tools mastered" color="var(--stat-red)" delay={1400} />
+          </div>
         </div>
 
         {/* Right column — circular portrait with floating availability card */}
@@ -57,7 +92,7 @@ export function Hero() {
           <div className="relative mx-auto flex max-w-md flex-col items-center lg:max-w-none">
             <div className="relative w-full max-w-md lg:max-w-lg">
               <div
-                className="hero-circle relative grid aspect-square w-full place-items-center overflow-hidden rounded-full"
+                style={d(200)} className="hero-anim in-zoom hero-circle relative grid aspect-square w-full place-items-center overflow-hidden rounded-full"
                 aria-hidden={false}
               >
                 <img
@@ -67,11 +102,11 @@ export function Hero() {
                   height={766}
                   fetchPriority="high"
                   decoding="async"
-                  className="absolute inset-0 h-full w-full object-contain p-[9%] drop-shadow-sm"
+                  style={d(500)} className="hero-anim in-down absolute inset-0 h-full w-full object-contain p-[9%] drop-shadow-sm"
                 />
               </div>
 
-              <div className="glass-card absolute -bottom-6 right-0 w-60 p-5 sm:w-64 sm:-right-2 lg:-right-4">
+              <div style={d(1000)} className="hero-anim in-right glass-card absolute -bottom-6 right-0 w-60 p-5 sm:w-64 sm:-right-2 lg:-right-4">
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary-dark">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
                   Available for work
