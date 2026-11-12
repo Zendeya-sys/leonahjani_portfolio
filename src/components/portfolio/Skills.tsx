@@ -40,22 +40,34 @@ export function Skills() {
           </h2>
         </div>
 
-        <ul className="mt-12 flex flex-wrap gap-3 sm:gap-4">
-          {tools.map((tool, i) => {
-            const Icon = icons[i % icons.length]!;
-            return (
-              <li key={tool.name}>
-                <span
-                  title={`${tool.name} — ${tool.label}`}
-                  className="tool-pill"
-                >
-                  <Icon size={18} strokeWidth={2} className="shrink-0" />
-                  {tool.name}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="mt-10 rounded-3xl border border-border bg-card p-6 shadow-card sm:p-8 lg:p-10">
+          <p className="eyebrow text-primary">Tools I Use</p>
+          <h3 className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
+            <span className="text-charcoal">Technologies I</span>{" "}
+            <span className="text-primary">Use</span>
+          </h3>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            A focused creative and marketing toolkit for building polished
+            brands, campaigns, and digital experiences.
+          </p>
+
+          <ul className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+            {tools.map((tool, i) => {
+              const Icon = icons[i % icons.length]!;
+              return (
+                <li key={tool.name}>
+                  <span
+                    title={`${tool.name} — ${tool.label}`}
+                    className="tool-pill"
+                  >
+                    <Icon size={18} strokeWidth={2} className="shrink-0" />
+                    {tool.name}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </section>
   );
