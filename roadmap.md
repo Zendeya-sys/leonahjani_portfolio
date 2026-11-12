@@ -11,3 +11,7 @@
 - [x] Add the large white "Technologies I Use" panel with its paragraph inside Skills & Tools, keeping the pill buttons.
 
 Waiting on user: business card images to replace the placeholder tiles; LinkedIn address for the LinkedIn icon.
+
+- [ ] Match the contact reference while preserving the real contact details and no-avatar preference.
+- [ ] Add a WhatsApp QR code beside the contact form.
+- [ ] Add a fixed Budiriro map below the QR code with a red location indicator.
