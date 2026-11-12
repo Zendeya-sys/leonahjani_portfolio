@@ -7,5 +7,6 @@
 - [x] Add the FIVO Pure Matcha poster as Designs card 04, showing the whole poster.
 - [x] Attach the supplied Canva link to the Pure Matcha poster and match Designs card sizes to certificate cards.
 - [x] Match Works card sizes to certificate cards (286×376) with the full 16:9 covers uncropped.
+- [x] Count the existing hero totals on first view and align moving colored strokes exactly with the gray circle tracks.
 
 Waiting on user: business card images to replace the placeholder tiles; LinkedIn address for the LinkedIn icon.

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, User } from "lucide-react";
 import heroPortrait from "@/assets/hero-portrait.webp";
 import { works, tools, CV_URL, CV_FILENAME } from "./data";
@@ -8,36 +8,52 @@ const YEARS_EXPERIENCE = 1;
 const d = (ms: number) => ({ animationDelay: `${ms}ms` });
 
 function StatRing({ value, label, color, delay }: { value: number; label: string; color: string; delay: number }) {
+  const ringRef = useRef<HTMLDivElement>(null);
   const [n, setN] = useState(0);
   const [p, setP] = useState(0);
+  const [started, setStarted] = useState(false);
   useEffect(() => {
+    const element = ringRef.current;
+    if (!element) return;
     let raf = 0;
+    let timer: ReturnType<typeof setTimeout> | undefined;
     const dur = 1600;
-    const timer = setTimeout(() => {
-      const start = performance.now();
-      const tick = (t: number) => {
-        const k = Math.min(1, (t - start) / dur);
-        const e = 1 - Math.pow(1 - k, 3);
-        setP(e);
-        setN(Math.round(e * value));
-        if (k < 1) raf = requestAnimationFrame(tick);
-      };
-      raf = requestAnimationFrame(tick);
-    }, delay);
-    return () => { clearTimeout(timer); cancelAnimationFrame(raf); };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      observer.disconnect();
+      timer = setTimeout(() => {
+        setStarted(true);
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          setN(value);
+          setP(1);
+          return;
+        }
+        const start = performance.now();
+        const tick = (t: number) => {
+          const k = Math.min(1, (t - start) / dur);
+          const e = 1 - Math.pow(1 - k, 3);
+          setP(e);
+          setN(Math.floor(e * value));
+          if (k < 1) raf = requestAnimationFrame(tick);
+        };
+        raf = requestAnimationFrame(tick);
+      }, delay);
+    }, { threshold: 0.5 });
+    observer.observe(element);
+    return () => { observer.disconnect(); clearTimeout(timer); cancelAnimationFrame(raf); };
   }, [value, delay]);
   const r = 34, c = 2 * Math.PI * r;
   return (
-    <div className="hero-anim in-up flex flex-col items-center text-center" style={d(delay - 300)}>
+    <div ref={ringRef} className="hero-anim in-up flex flex-col items-center text-center" style={d(delay - 300)}>
       <div className="relative h-20 w-20 sm:h-24 sm:w-24">
-        <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90">
+        <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90" aria-hidden="true">
           <circle cx="40" cy="40" r={r} fill="var(--background)" stroke="var(--border)" strokeWidth="5" />
-          <circle cx="40" cy="40" r={r} fill="none" stroke={color} strokeWidth="5" strokeLinecap="round"
+          <circle cx="40" cy="40" r={r} fill="none" stroke={color} strokeOpacity="0.55" strokeWidth="5" strokeLinecap="round"
             strokeDasharray={c} strokeDashoffset={c * (1 - p)} />
         </svg>
-        <svg viewBox="0 0 80 80" className="ring-spin absolute inset-0 h-full w-full" aria-hidden>
-          <circle cx="40" cy="40" r="39" fill="none" stroke={color} strokeOpacity="0.45" strokeWidth="1.5"
-            strokeDasharray="30 215" strokeLinecap="round" />
+        <svg viewBox="0 0 80 80" className={`${started ? "ring-spin" : ""} absolute inset-0 h-full w-full`} aria-hidden="true">
+          <circle cx="40" cy="40" r={r} fill="none" stroke={color} strokeOpacity={started ? 1 : 0} strokeWidth="5"
+            strokeDasharray={`30 ${c - 30}`} strokeLinecap="round" />
         </svg>
         <span className="absolute inset-0 grid place-items-center text-2xl font-extrabold text-charcoal sm:text-3xl">{n}</span>
       </div>
