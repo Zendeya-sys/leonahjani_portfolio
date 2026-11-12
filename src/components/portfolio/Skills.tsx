@@ -33,19 +33,12 @@ export function Skills() {
   return (
     <section id="skills" className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="min-w-0">
-          <p className="eyebrow">Capabilities</p>
-          <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-            <span className="text-charcoal">My Skills</span> &amp; Tools
-          </h2>
-        </div>
-
-        <div className="mt-10 rounded-3xl border border-border bg-card p-6 shadow-card sm:p-8 lg:p-10">
-          <p className="eyebrow text-primary">Tools I Use</p>
-          <h3 className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
+        <div className="rounded-3xl border border-border bg-card p-6 shadow-card sm:p-8 lg:p-10">
+          <p className="eyebrow text-primary">Capabilities</p>
+          <h2 className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
             <span className="text-charcoal">Technologies I</span>{" "}
             <span className="text-primary">Use</span>
-          </h3>
+          </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             A focused creative and marketing toolkit for building polished
             brands, campaigns, and digital experiences.
