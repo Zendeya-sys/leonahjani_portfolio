@@ -6,17 +6,11 @@ export function Works() {
   return (
     <section id="works" className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-4 sm:flex sm:items-end sm:justify-between">
-          <div className="min-w-0">
-            <p className="eyebrow">Selected work</p>
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-              <span className="text-charcoal">Some Of</span> My Works
-            </h2>
-          </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Campaigns, identities and interfaces — a look at how strategy turns into something people
-            can actually use.
-          </p>
+        <div className="min-w-0">
+          <p className="eyebrow">Selected work</p>
+          <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
+            <span className="text-charcoal">Some Of</span> My Works
+          </h2>
         </div>
 
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

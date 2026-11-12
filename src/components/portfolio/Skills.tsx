@@ -33,17 +33,11 @@ export function Skills() {
   return (
     <section id="skills" className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-4 sm:flex sm:items-end sm:justify-between">
-          <div className="min-w-0">
-            <p className="eyebrow">Capabilities</p>
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
-              <span className="text-charcoal">My Skills</span> &amp; Tools
-            </h2>
-          </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            The everyday stack behind my design work, campaigns, automation and performance
-            reporting.
-          </p>
+        <div className="min-w-0">
+          <p className="eyebrow">Capabilities</p>
+          <h2 className="mt-3 text-3xl font-extrabold leading-tight text-primary sm:text-4xl lg:text-5xl">
+            <span className="text-charcoal">My Skills</span> &amp; Tools
+          </h2>
         </div>
 
         <ul className="mt-12 flex flex-wrap gap-3 sm:gap-4">
