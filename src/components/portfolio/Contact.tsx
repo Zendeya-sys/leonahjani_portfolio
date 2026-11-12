@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { MapPin, Mail, Send, Phone } from "lucide-react";
 import { toast } from "sonner";
+import { QRCodeSVG } from "qrcode.react";
+import { Button } from "@/components/ui/button";
 import { socials } from "./Socials";
+import { contactLocation, WHATSAPP_URL } from "./data";
 
 const fields = [
   { id: "name", label: "Name", type: "text", placeholder: "Your full name" },
@@ -38,24 +41,27 @@ const details = [
 
 export function Contact() {
   const [sending, setSending] = useState(false);
+  const mapsKey = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY"];
+  const mapUrl = mapsKey
+    ? `https://www.google.com/maps/embed/v1/place?key=${encodeURIComponent(mapsKey)}&q=${encodeURIComponent(contactLocation.label)}&zoom=13`
+    : undefined;
 
   return (
     <section id="contact" className="bg-surface/70 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="grid items-start gap-8 lg:grid-cols-12 xl:gap-8">
           {/* Left column — intro, contact cards, socials */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 xl:col-span-4 lg:pt-6">
             <p className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary-dark">
               <span className="h-0.5 w-7 rounded-full bg-primary" aria-hidden="true" />
               Let's Build Something Together
             </p>
-            <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+            <h2 className="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl">
               <span className="text-charcoal">Get</span>{" "}
               <span className="text-primary">In Touch</span>
             </h2>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Ready to bring your next digital project to life? Drop me a line and I'll respond to
-              all enquiries within 24 hours.
+              Ready to bring your next digital project to life? Drop me a line and let's build something together.
             </p>
 
             <div className="mt-9 flex flex-col gap-4">
@@ -121,7 +127,7 @@ export function Contact() {
                 (e.target as HTMLFormElement).reset();
               }, 600);
             }}
-            className="flex flex-col rounded-2xl bg-primary/[0.06] p-6 shadow-[var(--shadow-card)] sm:p-8 lg:col-span-7"
+            className="flex min-w-0 flex-col rounded-2xl bg-primary/[0.06] p-6 shadow-[var(--shadow-card)] sm:p-8 lg:col-span-7 xl:col-span-5"
           >
             <div className="grid content-start gap-5 sm:grid-cols-2">
               {fields.map((f) => (
@@ -152,21 +158,46 @@ export function Contact() {
                 <textarea
                   id="message"
                   name="message"
-                  rows={8}
+                  rows={7}
                   required
                   placeholder="Tell me about your project, goals, and timeline…"
                   className="mt-2 w-full resize-none rounded-lg border border-primary/20 bg-card px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
               </div>
             </div>
-            <button
+            <Button
               type="submit"
               disabled={sending}
-              className="mt-auto flex w-full items-center justify-center gap-2.5 rounded-full bg-primary py-3.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-lime)] transition-colors hover:bg-primary-dark disabled:opacity-70"
+              className="mt-6 h-13 w-full gap-2.5 rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-[var(--shadow-lime)] hover:bg-primary-dark disabled:opacity-70"
             >
               {sending ? "Sending…" : "Send Message"} <Send size={16} />
-            </button>
+            </Button>
           </form>
+
+          <aside className="grid min-w-0 gap-7 sm:grid-cols-2 lg:col-span-12 xl:col-span-3 xl:grid-cols-1" aria-label="WhatsApp and location">
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-base font-bold text-charcoal">WhatsApp</h3>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat with Leonah on WhatsApp" className="mt-4 block w-44 max-w-full rounded-lg border border-primary/20 bg-card p-3 shadow-[var(--shadow-card)]">
+                <QRCodeSVG value={WHATSAPP_URL} size={152} level="M" marginSize={2} className="contact-qr h-auto w-full" title="Leonah Jani WhatsApp QR code" />
+              </a>
+              <Button asChild variant="outline" className="mt-4 h-10 rounded-full border-primary/25 text-primary-dark">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              </Button>
+            </div>
+
+            <div className="min-w-0">
+              <div className="mb-3 flex items-center gap-3">
+                <span className="location-beacon relative grid h-9 w-9 shrink-0 place-items-center rounded-full bg-destructive/10 text-destructive" aria-hidden="true"><MapPin size={18} /></span>
+                <div><h3 className="text-sm font-bold text-charcoal">Budiriro</h3><p className="text-xs text-muted-foreground">Harare, Zimbabwe</p></div>
+              </div>
+              <div className="h-56 overflow-hidden rounded-lg border border-border bg-surface">
+                {mapUrl ? <iframe title="Budiriro location on Google Maps" src={mapUrl} width="100%" height="100%" loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" className="border-0" /> : <div className="flex h-full items-center justify-center p-4 text-center text-sm text-muted-foreground">Map connection unavailable.</div>}
+              </div>
+              <Button asChild variant="link" className="mt-2 h-auto w-full whitespace-normal rounded-full px-0 text-xs text-primary-dark">
+                <a href={contactLocation.mapsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+              </Button>
+            </div>
+          </aside>
         </div>
       </div>
     </section>

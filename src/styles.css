@@ -342,3 +342,22 @@
   .hero-anim { animation: none !important; opacity: 1 !important; }
   .ring-spin { animation: none !important; }
 }
+
+.contact-qr { background: var(--card); }
+.contact-qr path:first-of-type { fill: var(--card); }
+.contact-qr path:last-of-type { fill: var(--charcoal); }
+.location-beacon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--destructive);
+  border-radius: 50%;
+  animation: location-pulse 2s ease-out infinite;
+}
+@keyframes location-pulse {
+  from { transform: scale(1); opacity: 0.8; }
+  to { transform: scale(1.7); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .location-beacon::after { animation: none; }
+}

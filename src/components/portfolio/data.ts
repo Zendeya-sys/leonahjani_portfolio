@@ -15,6 +15,12 @@ import card04 from "@/assets/card-04.webp";
 export const CV_URL = "/Leonah-M-Jani-CV.pdf";
 export const CV_FILENAME = "Leonah-M-Jani-CV.pdf";
 
+export const contactLocation = {
+  label: "Budiriro, Harare, Zimbabwe",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Budiriro%2C%20Harare%2C%20Zimbabwe",
+};
+export const WHATSAPP_URL = "https://wa.me/263784999655";
+
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
