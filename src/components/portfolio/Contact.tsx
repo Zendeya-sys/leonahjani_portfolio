@@ -49,7 +49,7 @@ export function Contact() {
   return (
     <section id="contact" className="bg-surface/70 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-6 xl:gap-8">
+        <div className="grid items-start gap-8 rounded-3xl border border-border bg-card p-5 shadow-card sm:p-8 lg:grid-cols-12 lg:gap-6 lg:p-10 xl:gap-8">
           {/* Left column — intro, contact cards, socials */}
           <div className="min-w-0 lg:col-span-4 lg:col-start-4 lg:row-start-1">
             <p className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary-dark">
@@ -82,14 +82,14 @@ export function Contact() {
                     key={d.id}
                     href={d.href}
                     aria-label={d.alt}
-                    className="flex items-center gap-4 rounded-2xl bg-card p-4 shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5 sm:gap-5 sm:px-6"
+                    className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5 sm:gap-5 sm:px-6"
                   >
                     {body}
                   </a>
                 ) : (
                   <div
                     key={d.id}
-                    className="flex items-center gap-4 rounded-2xl bg-card p-4 shadow-[var(--shadow-card)] sm:gap-5 sm:px-6"
+                    className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)] sm:gap-5 sm:px-6"
                   >
                     {body}
                   </div>
@@ -106,7 +106,7 @@ export function Contact() {
                     {...(url.startsWith("http")
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
-                    className="grid h-11 w-11 place-items-center rounded-xl bg-card text-primary-dark shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground"
+                    className="grid h-11 w-11 place-items-center rounded-xl border border-border bg-card text-primary-dark shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground"
                   >
                     <Icon size={18} strokeWidth={2} />
                   </a>
