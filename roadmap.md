@@ -15,3 +15,4 @@ Waiting on user: business card images to replace the placeholder tiles; LinkedIn
 - [x] Match the contact reference while preserving the real contact details and no-avatar preference.
 - [x] Add a WhatsApp QR code beside the contact form, including smaller desktop widths.
 - [x] Add a fixed Budiriro map below the QR code with a red location indicator (live map rendering requires deployed-origin verification).
+- [x] Move the WhatsApp QR and Budiriro map column to the far left of the contact section, QR on top and map below, keeping column spacing.
