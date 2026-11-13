@@ -174,7 +174,7 @@ export function Contact() {
             </Button>
           </form>
 
-          <aside className="grid min-w-0 gap-7 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-1" aria-label="WhatsApp and location">
+          <aside className="flex min-w-0 flex-col gap-7 lg:col-span-3 lg:col-start-10 lg:row-start-1" aria-label="WhatsApp and location">
             <div className="flex flex-col items-center text-center">
               <h3 className="text-base font-bold text-charcoal">WhatsApp</h3>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat with Leonah on WhatsApp" className="mt-4 block w-44 max-w-full rounded-lg border border-primary/20 bg-card p-3 shadow-[var(--shadow-card)]">
