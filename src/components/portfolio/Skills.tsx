@@ -39,7 +39,7 @@ export function Skills() {
             <span className="text-charcoal">Technologies I</span>{" "}
             <span className="text-primary">Use</span>
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p className="mt-3 max-w-2xl text-xs leading-relaxed text-muted-foreground sm:text-sm">
             A focused creative and marketing toolkit for building polished
             brands, campaigns, and digital experiences.
           </p>

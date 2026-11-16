@@ -11,7 +11,7 @@ export function BusinessCards() {
               <span className="text-charcoal">Business</span> Cards
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+          <p className="max-w-sm text-xs leading-relaxed text-muted-foreground">
             Card layouts that carry the same identity into the real world — legible, balanced and
             ready for print.
           </p>
@@ -34,7 +34,7 @@ export function BusinessCards() {
                   {c.category}
                 </p>
                 <h3 className="mt-2 text-base font-bold tracking-tight">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                   {c.description}
                 </p>
               </div>

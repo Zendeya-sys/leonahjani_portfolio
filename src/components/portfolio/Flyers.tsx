@@ -13,7 +13,7 @@ export function Flyers() {
               <span className="text-charcoal">The</span> Designs
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+          <p className="max-w-sm text-xs leading-relaxed text-muted-foreground">
             Promotional flyers and event posters — bold layouts, clear hierarchy and a consistent
             lime-green identity.
           </p>

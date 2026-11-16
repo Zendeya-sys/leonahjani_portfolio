@@ -76,13 +76,13 @@ export function Hero() {
             <span className="text-primary">Leonah Jani.</span>
           </h1>
 
-          <p style={d(350)} className="hero-anim in-left mt-6 text-base font-bold leading-snug text-charcoal sm:text-lg">
+          <p style={d(350)} className="hero-anim in-left mt-6 text-sm font-bold leading-snug text-charcoal sm:text-base">
             Digital Marketer &amp; Designer
             <br />
             based in <span className="text-primary">Harare, Zimbabwe.</span>
           </p>
 
-          <p style={d(550)} className="hero-anim in-up mt-5 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p style={d(550)} className="hero-anim in-up mt-5 max-w-md text-xs leading-relaxed text-muted-foreground sm:text-sm">
             I help brands and creative businesses build meaningful digital experiences, strategic
             campaigns, and visually engaging identities.
           </p>
@@ -127,7 +127,7 @@ export function Hero() {
                   <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />
                   Available for work
                 </span>
-                <p className="mt-3 text-sm leading-relaxed text-foreground">
+                <p className="mt-3 text-xs leading-relaxed text-foreground">
                   I&rsquo;m currently accepting{" "}
                   <span className="font-bold text-charcoal">new projects</span> worldwide.
                 </p>

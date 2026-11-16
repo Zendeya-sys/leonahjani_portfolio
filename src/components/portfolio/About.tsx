@@ -37,30 +37,30 @@ export function About() {
               <span className="text-primary">Me In Details</span>
             </h2>
           </div>
-          <p className="min-w-0 text-base leading-relaxed text-muted-foreground sm:text-lg lg:pb-1">
+          <p className="min-w-0 text-sm leading-relaxed text-muted-foreground sm:text-base lg:pb-1">
             I work at the intersection of marketing and design — building brands that look
             considered and campaigns that perform. From strategy and content creation to the final
             interface, I keep every touchpoint consistent, intentional and easy to act on.
           </p>
         </div>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3">
           {roles.map((r) => (
-            <li key={r.title} className="card-surface flex min-w-0 flex-col p-5">
-              <h3 className="text-base font-bold tracking-tight sm:text-lg">{r.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{r.copy}</p>
+            <li key={r.title} className="card-surface flex min-w-0 flex-col p-4">
+              <h3 className="text-sm font-bold tracking-tight sm:text-base">{r.title}</h3>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{r.copy}</p>
             </li>
           ))}
         </ul>
 
-        <div className="mt-10 flex flex-col gap-8 border-t border-border pt-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+        <div className="mt-8 flex flex-col gap-6 border-t border-border pt-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="min-w-0">
             <span className="inline-flex rounded-full bg-primary px-4 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-primary-foreground">
               Marketing · Design · UX
             </span>
             <ul className="mt-5 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
               {skills.map((s) => (
-                <li key={s} className="flex min-w-0 items-center gap-2 text-sm text-muted-foreground">
+                <li key={s} className="flex min-w-0 items-center gap-2 text-xs text-muted-foreground">
                   <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground">
                     <Check size={12} strokeWidth={3} />
                   </span>

@@ -60,7 +60,7 @@ export function Contact() {
               <span className="text-charcoal">Get</span>{" "}
               <span className="text-primary">In Touch</span>
             </h2>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <p className="mt-5 max-w-md text-xs leading-relaxed text-muted-foreground sm:text-sm">
               Ready to bring your next digital project to life? Drop me a line and let's build something together.
             </p>
 

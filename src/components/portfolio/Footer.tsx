@@ -10,14 +10,14 @@ export function Footer() {
             <div className="flex min-w-0 items-center">
               <span className="truncate text-lg font-bold tracking-tight">Leonah Jani</span>
             </div>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-charcoal-foreground/65">
+            <p className="mt-4 max-w-xs text-xs leading-relaxed text-charcoal-foreground/65">
               Creating digital experiences that connect, engage, and inspire.
             </p>
           </div>
 
           <nav>
             <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Navigate</h3>
-            <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <ul className="mt-4 grid grid-cols-2 gap-2 text-xs">
               {navLinks.map((l) => (
                 <li key={l.label}>
                   <a
