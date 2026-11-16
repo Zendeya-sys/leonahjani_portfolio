@@ -64,15 +64,15 @@ export function Contact() {
               Ready to bring your next digital project to life? Drop me a line and let's build something together.
             </p>
 
-            <div className="mt-9 flex flex-col gap-4">
+            <div className="mt-7 flex flex-col gap-3">
               {details.map((d) => {
                 const Icon = d.icon;
                 const body = (
                   <>
-                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/12 text-primary-dark">
-                      <Icon size={18} />
+                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/12 text-primary-dark">
+                      <Icon size={15} />
                     </span>
-                    <span className="min-w-0 text-sm font-bold text-charcoal sm:text-[0.95rem]">
+                    <span className="min-w-0 text-[0.8rem] font-bold text-charcoal sm:text-[0.85rem]">
                       {d.text}
                     </span>
                   </>
@@ -82,14 +82,14 @@ export function Contact() {
                     key={d.id}
                     href={d.href}
                     aria-label={d.alt}
-                    className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5 sm:gap-5 sm:px-6"
+                    className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-0.5 sm:gap-4 sm:px-5"
                   >
                     {body}
                   </a>
                 ) : (
                   <div
                     key={d.id}
-                    className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)] sm:gap-5 sm:px-6"
+                    className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-[var(--shadow-card)] sm:gap-4 sm:px-5"
                   >
                     {body}
                   </div>
@@ -97,7 +97,7 @@ export function Contact() {
               })}
             </div>
 
-            <ul className="mt-9 flex flex-wrap items-center gap-3">
+            <ul className="mt-7 flex flex-wrap items-center gap-2.5">
               {socials.map(({ label, Icon, url }) => (
                 <li key={label}>
                   <a
@@ -106,9 +106,9 @@ export function Contact() {
                     {...(url.startsWith("http")
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
-                    className="grid h-11 w-11 place-items-center rounded-xl border border-border bg-card text-primary-dark shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground"
+                    className="grid h-10 w-10 place-items-center rounded-lg border border-border bg-card text-primary-dark shadow-[var(--shadow-card)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground"
                   >
-                    <Icon size={18} strokeWidth={2} />
+                    <Icon size={16} strokeWidth={2} />
                   </a>
                 </li>
               ))}
