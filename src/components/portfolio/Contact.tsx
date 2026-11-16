@@ -176,7 +176,7 @@ export function Contact() {
 
           <aside className="flex min-w-0 flex-col gap-6 lg:col-span-3 lg:col-start-10 lg:row-start-1" aria-label="WhatsApp and location">
             <div className="flex min-w-0 flex-col">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat with Leonah on WhatsApp" className="block w-full rounded-2xl border border-primary/20 bg-card p-3 shadow-[var(--shadow-card)]">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat with Leonah on WhatsApp" className="block w-full rounded-2xl border-2 border-primary bg-card p-3">
                 <QRCodeSVG value={WHATSAPP_URL} size={168} level="M" marginSize={2} className="contact-qr mx-auto h-auto w-auto max-w-full" title="Leonah Jani WhatsApp QR code" />
               </a>
               <Button asChild variant="outline" className="mt-4 h-10 w-full rounded-full border-primary/25 text-primary-dark">
