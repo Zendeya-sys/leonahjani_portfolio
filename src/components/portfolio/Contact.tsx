@@ -51,7 +51,7 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid items-start gap-8 rounded-3xl border border-border bg-card p-5 shadow-card sm:p-8 lg:grid-cols-12 lg:gap-6 lg:p-10 xl:gap-8">
           {/* Left column — intro, contact cards, socials */}
-          <div className="min-w-0 lg:col-span-4 lg:col-start-4 lg:row-start-1">
+          <div className="min-w-0 lg:col-span-4 lg:col-start-1 lg:row-start-1">
             <p className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary-dark">
               <span className="h-0.5 w-7 rounded-full bg-primary" aria-hidden="true" />
               Let's Build Something Together
@@ -127,7 +127,7 @@ export function Contact() {
                 (e.target as HTMLFormElement).reset();
               }, 600);
             }}
-            className="flex min-w-0 flex-col rounded-2xl bg-primary/[0.06] p-6 shadow-[var(--shadow-card)] sm:p-8 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:p-6 xl:p-8"
+            className="flex min-w-0 flex-col rounded-2xl bg-primary/[0.06] p-6 shadow-[var(--shadow-card)] sm:p-8 lg:col-span-5 lg:col-start-5 lg:row-start-1 lg:p-6 xl:p-8"
           >
             <div className="grid content-start gap-5 sm:grid-cols-2">
               {fields.map((f) => (
@@ -174,7 +174,7 @@ export function Contact() {
             </Button>
           </form>
 
-          <aside className="flex min-w-0 flex-col gap-7 lg:col-span-3 lg:col-start-1 lg:row-start-1" aria-label="WhatsApp and location">
+          <aside className="flex min-w-0 flex-col gap-6 lg:col-span-3 lg:col-start-10 lg:row-start-1" aria-label="WhatsApp and location">
             <div className="flex min-w-0 flex-col">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat with Leonah on WhatsApp" className="block w-full rounded-2xl border border-primary/20 bg-card p-3 shadow-[var(--shadow-card)]">
                 <QRCodeSVG value={WHATSAPP_URL} size={168} level="M" marginSize={2} className="contact-qr mx-auto h-auto w-auto max-w-full" title="Leonah Jani WhatsApp QR code" />
@@ -189,7 +189,7 @@ export function Contact() {
                 <span className="location-beacon relative grid h-9 w-9 shrink-0 place-items-center rounded-full bg-destructive/10 text-destructive" aria-hidden="true"><MapPin size={18} /></span>
                 <div><h3 className="text-sm font-bold text-charcoal">Budiriro</h3><p className="text-xs text-muted-foreground">Harare, Zimbabwe</p></div>
               </div>
-              <div className="h-56 overflow-hidden rounded-2xl border border-primary/20 bg-card">
+              <div className="h-48 overflow-hidden rounded-2xl border border-primary/20 bg-card">
                 {mapUrl ? <iframe title="Budiriro location on Google Maps" src={mapUrl} width="100%" height="100%" loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" className="border-0" /> : <div className="flex h-full items-center justify-center p-4 text-center text-sm text-muted-foreground">Map connection unavailable.</div>}
               </div>
               <Button asChild variant="link" className="mt-2 h-auto w-full whitespace-normal rounded-full px-0 text-xs text-primary-dark">
