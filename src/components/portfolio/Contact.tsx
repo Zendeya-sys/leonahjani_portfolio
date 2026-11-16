@@ -174,10 +174,10 @@ export function Contact() {
             </Button>
           </form>
 
-          <aside className="flex min-w-0 flex-col gap-6 lg:col-span-3 lg:col-start-10 lg:row-start-1" aria-label="WhatsApp and location">
+          <aside className="flex min-w-0 flex-col gap-6 lg:col-span-3 lg:col-start-10 lg:row-start-1 lg:px-4" aria-label="WhatsApp and location">
             <div className="flex min-w-0 flex-col">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat with Leonah on WhatsApp" className="block w-full rounded-2xl border-2 border-primary bg-card p-3">
-                <QRCodeSVG value={WHATSAPP_URL} size={168} level="M" marginSize={2} className="contact-qr mx-auto h-auto w-auto max-w-full" title="Leonah Jani WhatsApp QR code" />
+                <QRCodeSVG value={WHATSAPP_URL} size={152} level="M" marginSize={2} className="contact-qr mx-auto h-auto w-auto max-w-full" title="Leonah Jani WhatsApp QR code" />
               </a>
               <Button asChild variant="outline" className="mt-4 h-10 w-full rounded-full border-primary/25 text-primary-dark">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
@@ -189,7 +189,7 @@ export function Contact() {
                 <span className="location-beacon relative grid h-9 w-9 shrink-0 place-items-center rounded-full bg-destructive/10 text-destructive" aria-hidden="true"><MapPin size={18} /></span>
                 <div><h3 className="text-sm font-bold text-charcoal">Budiriro</h3><p className="text-xs text-muted-foreground">Harare, Zimbabwe</p></div>
               </div>
-              <div className="h-48 overflow-hidden rounded-2xl border border-primary/20 bg-card">
+              <div className="h-44 overflow-hidden rounded-2xl border border-primary/20 bg-card">
                 {mapUrl ? <iframe title="Budiriro location on Google Maps" src={mapUrl} width="100%" height="100%" loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" className="border-0" /> : <div className="flex h-full items-center justify-center p-4 text-center text-sm text-muted-foreground">Map connection unavailable.</div>}
               </div>
               <Button asChild variant="link" className="mt-2 h-auto w-full whitespace-normal rounded-full px-0 text-xs text-primary-dark">
